@@ -1,11 +1,15 @@
 use_frameworks!
 
+#Created by using the tutorial at https://medium.com/swiftindia/build-an-ios-watchos-and-tvos-framework-with-a-dependency-using-cocoapods-80cb9307992f
+
+
 target 'PrimeFactors_Example' do
-  pod 'PrimeFactors', :path => '../'
-
-  target 'PrimeFactors_Tests' do
-    inherit! :search_paths
-
-    
-  end
+	pod 'PrimeFactors', :path => '../'
+	pod 'BigInt', '~> 3.0'
+	pod 'SipHash', '~>1.2'
+	
+	target 'PrimeFactors_Tests' do
+		inherit! :search_paths
+	end
 end
+

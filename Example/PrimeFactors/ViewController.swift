@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import BigInt
+import PrimeFactors
 
 class ViewController: UIViewController {
 
