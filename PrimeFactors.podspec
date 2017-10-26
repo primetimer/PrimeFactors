@@ -30,6 +30,8 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
+  s.dependency 'BigInt'
+  #s.source_files = 'PFactors/Classes/*.{swift}'
   s.source_files = 'PrimeFactors/Classes/**/*'
   
   # s.resource_bundles = {

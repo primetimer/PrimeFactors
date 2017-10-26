@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		480F217747BB0BE114FA2A24 /* Pods_PrimeFactors_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD42C7019EF968E858496D36 /* Pods_PrimeFactors_Tests.framework */; };
+		54749C451FA1B96200C94423 /* RPNInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54749C391FA1B96100C94423 /* RPNInfo.swift */; };
+		54749C461FA1B96200C94423 /* digital-7mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54749C3A1FA1B96100C94423 /* digital-7mono.ttf */; };
+		54749C471FA1B96200C94423 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54749C3B1FA1B96100C94423 /* Images.xcassets */; };
+		54749C481FA1B96200C94423 /* RPNCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54749C3C1FA1B96100C94423 /* RPNCalc.swift */; };
+		54749C491FA1B96200C94423 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54749C3D1FA1B96100C94423 /* Extensions.swift */; };
+		54749C4A1FA1B96200C94423 /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54749C3E1FA1B96200C94423 /* digital-7.ttf */; };
+		54749C4B1FA1B96200C94423 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54749C3F1FA1B96200C94423 /* UIExtensions.swift */; };
+		54749C4C1FA1B96200C94423 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54749C411FA1B96200C94423 /* LaunchScreen.xib */; };
+		54749C4D1FA1B96200C94423 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54749C431FA1B96200C94423 /* Main.storyboard */; };
+		54749C4F1FA1EA1E00C94423 /* AsyncCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54749C4E1FA1B9B200C94423 /* AsyncCalc.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -33,6 +43,16 @@
 		3B918B1A6A435750B98888B2 /* Pods-PrimeFactors_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeFactors_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrimeFactors_Tests/Pods-PrimeFactors_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4E80247E405568280CA839E1 /* Pods-PrimeFactors_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeFactors_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrimeFactors_Example/Pods-PrimeFactors_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4F03085ED495027771CD3E3F /* PrimeFactors.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PrimeFactors.podspec; path = ../PrimeFactors.podspec; sourceTree = "<group>"; };
+		54749C391FA1B96100C94423 /* RPNInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPNInfo.swift; sourceTree = "<group>"; };
+		54749C3A1FA1B96100C94423 /* digital-7mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "digital-7mono.ttf"; path = "PrimeFactors/digital-7mono.ttf"; sourceTree = "<group>"; };
+		54749C3B1FA1B96100C94423 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PrimeFactors/Images.xcassets; sourceTree = "<group>"; };
+		54749C3C1FA1B96100C94423 /* RPNCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPNCalc.swift; sourceTree = "<group>"; };
+		54749C3D1FA1B96100C94423 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = PrimeFactors/Extensions.swift; sourceTree = "<group>"; };
+		54749C3E1FA1B96200C94423 /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "digital-7.ttf"; path = "PrimeFactors/digital-7.ttf"; sourceTree = "<group>"; };
+		54749C3F1FA1B96200C94423 /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		54749C421FA1B96200C94423 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		54749C441FA1B96200C94423 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		54749C4E1FA1B9B200C94423 /* AsyncCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AsyncCalc.swift; path = PrimeFactors/AsyncCalc.swift; sourceTree = SOURCE_ROOT; };
 		607FACD01AFB9204008FA782 /* PrimeFactors_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimeFactors_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,9 +89,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54749C401FA1B96200C94423 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				54749C411FA1B96200C94423 /* LaunchScreen.xib */,
+				54749C431FA1B96200C94423 /* Main.storyboard */,
+			);
+			name = Base.lproj;
+			path = PrimeFactors/Base.lproj;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				54749C401FA1B96200C94423 /* Base.lproj */,
+				54749C3E1FA1B96200C94423 /* digital-7.ttf */,
+				54749C3A1FA1B96100C94423 /* digital-7mono.ttf */,
+				54749C3D1FA1B96100C94423 /* Extensions.swift */,
+				54749C3B1FA1B96100C94423 /* Images.xcassets */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for PrimeFactors */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -93,6 +128,10 @@
 		607FACD21AFB9204008FA782 /* Example for PrimeFactors */ = {
 			isa = PBXGroup;
 			children = (
+				54749C3C1FA1B96100C94423 /* RPNCalc.swift */,
+				54749C3F1FA1B96200C94423 /* UIExtensions.swift */,
+				54749C391FA1B96100C94423 /* RPNInfo.swift */,
+				54749C4E1FA1B9B200C94423 /* AsyncCalc.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -250,6 +289,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54749C461FA1B96200C94423 /* digital-7mono.ttf in Resources */,
+				54749C4A1FA1B96200C94423 /* digital-7.ttf in Resources */,
+				54749C471FA1B96200C94423 /* Images.xcassets in Resources */,
+				54749C4D1FA1B96200C94423 /* Main.storyboard in Resources */,
+				54749C4C1FA1B96200C94423 /* LaunchScreen.xib in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
@@ -376,8 +420,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54749C491FA1B96200C94423 /* Extensions.swift in Sources */,
+				54749C451FA1B96200C94423 /* RPNInfo.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				54749C4B1FA1B96200C94423 /* UIExtensions.swift in Sources */,
+				54749C4F1FA1EA1E00C94423 /* AsyncCalc.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				54749C481FA1B96200C94423 /* RPNCalc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +449,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		54749C411FA1B96200C94423 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54749C421FA1B96200C94423 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		54749C431FA1B96200C94423 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54749C441FA1B96200C94423 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -527,10 +592,11 @@
 				INFOPLIST_FILE = PrimeFactors/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "esjot.PFactors.demo.PFactors-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -543,10 +609,11 @@
 				INFOPLIST_FILE = PrimeFactors/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "esjot.PFactors.demo.PFactors-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
