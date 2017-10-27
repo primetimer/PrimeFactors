@@ -16,7 +16,7 @@ To run the example project, clone the repo, and open the workspace from the Exam
 
 ## Requirements
 
-Uses the pod BigInt Pod from https://github.com/attaswift/BigInt/tree/master/sources
+Uses the pod BigInt Pod from https://github.com/attaswift/BigInt
 
 ## Installation
 
