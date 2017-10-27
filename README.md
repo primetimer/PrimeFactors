@@ -1,13 +1,17 @@
 # PrimeFactors
 
-#[![CI Status](http://img.shields.io/travis/primetimer/PrimeFactors.svg?style=flat)](https://travis-ci.org/primetimer/PrimeFactors)
-#[![Version](https://img.shields.io/cocoapods/v/PrimeFactors.svg?style=flat)](http://cocoapods.org/pods/PrimeFactors)
-#[![License](https://img.shields.io/cocoapods/l/PrimeFactors.svg?style=flat)](http://cocoapods.org/pods/PrimeFactors)
-#[![Platform](https://img.shields.io/cocoapods/p/PrimeFactors.svg?style=flat)](http://cocoapods.org/pods/PrimeFactors)
+<!---
+[![CI Status](http://img.shields.io/travis/primetimer/PrimeFactors.svg?style=flat)](https://travis-ci.org/primetimer/PrimeFactors)
+[![Version](https://img.shields.io/cocoapods/v/PrimeFactors.svg?style=flat)](http://cocoapods.org/pods/PrimeFactors)
+[![License](https://img.shields.io/cocoapods/l/PrimeFactors.svg?style=flat)](http://cocoapods.org/pods/PrimeFactors)
+[![Platform](https://img.shields.io/cocoapods/p/PrimeFactors.svg?style=flat)](http://cocoapods.org/pods/PrimeFactors)
+--->
 
 ## Example
 
-#To run the example project, clone the repo, and run `pod install` from the Example directory first.
+<!---
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+--->
 To run the example project, clone the repo, and open the workspace from the Example directory.
 
 ## Requirements
