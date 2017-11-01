@@ -17,7 +17,6 @@
 		333171BA934355EACBEDB924CEAF8640 /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC20EE64BBCBB0E0DC05205D4BC6A548 /* Comparable.swift */; };
 		462E11A980823607DB4D49AAFD2C38BF /* BigUInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9415D0C6BF879031CD69931AD468A3D /* BigUInt.swift */; };
 		474A6AE1DBBFB182D4C39661D75CCB5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34323CF20CE12CDD6B600030FCD3A2D8 /* Foundation.framework */; };
-		544CD6951FA32B2300784587 /* BigFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544CD6941FA32B2300784587 /* BigFloat.swift */; };
 		54DF206F1FA1B64600E98233 /* BitArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DF206A1FA1B5EC00E98233 /* BitArray.swift */; };
 		54DF20701FA1B64900E98233 /* Factorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DF205F1FA1B5EB00E98233 /* Factorize.swift */; };
 		54DF20711FA1B64D00E98233 /* FactorStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DF20621FA1B5EC00E98233 /* FactorStrategy.swift */; };
@@ -142,7 +141,6 @@
 		4FE391EA2AA22E254E36D92FDFFF7998 /* Pods-PrimeFactors_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PrimeFactors_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		50CE9ADE879C7FB7F6E663D59CAB4D3A /* Pods-PrimeFactors_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrimeFactors_Tests-umbrella.h"; sourceTree = "<group>"; };
 		514A233C6C91CD5905B358AAC44E093A /* SipHashable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipHashable.swift; path = SipHash/SipHashable.swift; sourceTree = "<group>"; };
-		544CD6941FA32B2300784587 /* BigFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BigFloat.swift; path = PrimeFactors/Classes/BigFloat.swift; sourceTree = "<group>"; };
 		54DF205E1FA1B5EB00E98233 /* TrialDivision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrialDivision.swift; path = PrimeFactors/Classes/TrialDivision.swift; sourceTree = "<group>"; };
 		54DF205F1FA1B5EB00E98233 /* Factorize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Factorize.swift; path = PrimeFactors/Classes/Factorize.swift; sourceTree = "<group>"; };
 		54DF20601FA1B5EB00E98233 /* PrimeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrimeProtocol.swift; path = PrimeFactors/Classes/PrimeProtocol.swift; sourceTree = "<group>"; };
@@ -360,7 +358,6 @@
 				54DF20611FA1B5EB00E98233 /* UInt128Extension.swift */,
 				54DF206D1FA1B5ED00E98233 /* WheelSieve.swift */,
 				82F523C822869BBC215147BC282060EA /* Support Files */,
-				544CD6941FA32B2300784587 /* BigFloat.swift */,
 			);
 			name = PrimeFactors;
 			path = ../..;
@@ -679,7 +676,6 @@
 				5D490BDCD725E5C380631F7408006493 /* PrimeFactors-dummy.m in Sources */,
 				54DF20721FA1B65000E98233 /* Lehman.swift in Sources */,
 				54DF20741FA1B65700E98233 /* Pollard.swift in Sources */,
-				544CD6951FA32B2300784587 /* BigFloat.swift in Sources */,
 				54DF207D1FA1B67700E98233 /* UInt128.swift in Sources */,
 				54DF20711FA1B64D00E98233 /* FactorStrategy.swift in Sources */,
 				54DF207C1FA1B67300E98233 /* TrialDivision.swift in Sources */,
