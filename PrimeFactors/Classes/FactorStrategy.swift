@@ -5,13 +5,14 @@
 //  Created by Stephan Jancar on 18.10.17.
 //
 
+
 import Foundation
 import BigInt
 
 public class PrimeFactorStrategy {
 	
-	var verbose = true
-	private let first : [UInt64] = [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,5359,61,71,73,79,83,89,97]
+	var verbose = false
+	private let first : [UInt64] = [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,71,73,79,83,89,97]
 	private var rho : PrimeFaktorRho!
 	private var shanks : PrimeFactorShanks!
 	private var lehman : PrimeFactorLehman!
@@ -109,7 +110,7 @@ public class PrimeFactorStrategy {
 		
 		//3. Letzte Retturn Fermattest
 		while nn > 1 {
-						if verbose { print("Fermat") }
+			if verbose { print("Fermat") }
 			if nn.isPrime() {
 				factors.append(nn)
 				if verbose { print("Factor:",nn) }
