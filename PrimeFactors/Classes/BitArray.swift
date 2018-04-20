@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class BitArray {
+public class BitArray {
 	
 	let UIntInBits : UInt64 = UInt64(MemoryLayout<UInt64>.size * 8)
 	
@@ -14,7 +14,7 @@ class BitArray {
 	private (set) var countInts : UInt64 = 0
 	var bitarr : [UInt64] = []
 
-	init(count:UInt64, initval : Bool = false) {
+	public init(count:UInt64, initval : Bool = false) {
 		
 		self.count = count
 		self.countInts = self.count / UIntInBits + 1
@@ -35,7 +35,7 @@ class BitArray {
 		return (intindex, bitIndex)
 	}
 	
-	func getBit(nr : UInt64) -> Bool {
+	public func getBit(nr : UInt64) -> Bool {
 		
 		let (intIndex,bitIndex) = Index(bitnr: nr)
 		let intval = bitarr[Int(intIndex)]
@@ -43,7 +43,7 @@ class BitArray {
 		mask = mask & intval
 		return mask != 0
 	}
-	func setBit(nr : UInt64, value : Bool) {
+	public func setBit(nr : UInt64, value : Bool) {
 		
 		let (intIndex,bitIndex) = Index(bitnr: nr)
 		let mask : UInt64 = UInt64(1) << UInt64(bitIndex)
