@@ -9,7 +9,7 @@
 import Foundation
 import BigInt
 
-public struct PrimeFactors {
+public class PrimeFactors : NSObject {
 	public var n : BigUInt
 	public var factors : [BigUInt]
 	public var unfactored : BigUInt
@@ -34,7 +34,7 @@ public struct PrimeFactors {
 			unfactored = 1
 		}
 	}
-	mutating func Append(f: BigUInt) {
+	func Append(f: BigUInt) {
 		factors.append(f)
 		self.unfactored = self.unfactored / f
 	}
