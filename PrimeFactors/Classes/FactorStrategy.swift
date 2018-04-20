@@ -26,7 +26,7 @@ public struct PrimeFactors {
 		return true
 	}
 	
-	init(n: BigUInt) {
+	public init(n: BigUInt) {
 		self.n = n
 		self.unfactored = n
 		self.factors = []
