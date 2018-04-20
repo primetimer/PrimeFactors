@@ -9,6 +9,34 @@
 import Foundation
 import BigInt
 
+public struct PrimeFactors {
+	public var n : BigUInt
+	public var factors : [BigUInt]
+	public var unfactored : BigUInt
+	private var _completed = false
+	mutating func completed() -> Bool {
+		if _completed { return true }
+		var prod : BigUInt = 1
+		for f in factors {
+			prod = prod * f
+		}
+		if prod < n { return false }
+		if prod > n { assert(false); return false }
+		_completed = true
+		return true
+	}
+	
+	init(n: BigUInt) {
+		self.n = n
+		self.unfactored = n
+		self.factors = []
+	}
+	mutating func Append(f: BigUInt) {
+		factors.append(f)
+		self.unfactored = self.unfactored / f
+	}
+}
+
 public class PrimeFactorStrategy {
 	
 	var verbose = false
@@ -27,41 +55,40 @@ public class PrimeFactorStrategy {
 //		self.lehman.canceldelegate = cancel
 	}
 	
-	private func QuickTrial(ninput: BigUInt) -> (rest : BigUInt, factors : [BigUInt]) {
+	private func QuickTrial(ninput: BigUInt) -> PrimeFactors {
 		if verbose { print ("QuickTrial") }
-		var factors : [BigUInt] = []
-		var nn = ninput
+		var factors = PrimeFactors(n: ninput)
 		for p in first {
 			let bigp = BigUInt(p)
-			if bigp * bigp > nn { break }
-			while nn % bigp == 0 {
-				nn = nn / bigp
-				factors.append(bigp)
+			if bigp * bigp > factors.unfactored { break }
+			while factors.unfactored % bigp == 0 {
+//				nn = nn / bigp
+				factors.Append(f: bigp)
 				if verbose { print("Factor:",bigp) }
 			}
 		}
-		return (rest: nn, factors: factors)
+		return factors
 	}
 	
-	public func Factorize(ninput: BigUInt, cancel: CalcCancelProt?) -> [BigUInt] {
+	public func Factorize(ninput: BigUInt, cancel: CalcCancelProt?) -> PrimeFactors {
 		
 		//1. Probedivision fuer sehr kleine Faktoren
-		var (nn,factors) = QuickTrial(ninput: ninput)
-		if nn == 1 { return factors }
+		var factors = QuickTrial(ninput: ninput)
+		if factors.unfactored == 1 { return factors }
 		
 		//2. Pollards-Rho Methode fuer kleine Zahlen zur Abspaltung von Faktoren bis zur vierten Wurzel
 		let rhoupto = ninput.squareRoot().squareRoot()
-		while nn > rhoupto { //Heuristik
+		while factors.unfactored > rhoupto { //Heuristik
 			if verbose { print ("Rho") }
 			//Rest schon prim, dann fertig
-			if nn.isPrime() {
-				factors.append(nn)
-				if verbose { print("Factor:",nn) }
+			if factors.unfactored.isPrime() {
+				factors.Append(f: factors.unfactored)
+//				if verbose { print("Factor:",factors.unfactored) }
 				return factors
 			}
 			
 			//Suche mit Pollards-Methode
-			let factor = rho.GetFactor(n: nn, cancel: cancel)
+			let factor = rho.GetFactor(n: factors.unfactored, cancel: cancel)
 			
 			//Nichts gefunden, dann weiter mit der nächsten Methode
 			if factor == 0 { break }
@@ -70,69 +97,73 @@ public class PrimeFactorStrategy {
 			if !factor.isPrime() {
 				//Der gefundene Faktor war nicht prim, dann zerlegen
 				let subfactors = self.Factorize(ninput: factor, cancel: cancel)
-				for s in subfactors {
-					factors.append(s);
+				for s in subfactors.factors {
+					factors.Append(f: s);
 					if verbose { print("Factor:",s) }
-					nn = nn / s }
+//					nn = nn / s
+					
+				}
 			} else {
 				//Primfaktor abspalten
-				factors.append(factor)
+				factors.Append(f: factor)
 				if verbose { print("Factor:",factor) }
-				nn = nn / factor
+				//nn = nn / factor
 			}
 		}
 		
 		//Wechsle zu Shanks
-		while nn > 1 {
+		while factors.unfactored > 1 {
 			if verbose { print("Shanks") }
 			//Rest schon prim, dann fertig
-			if nn.isPrime() {
-				factors.append(nn)
-				if verbose { print("Factor:",nn) }
+			if factors.unfactored.isPrime() {
+				factors.Append(f: factors.unfactored)
+//				if verbose { print("Factor:",nn) }
 				return factors
 			}
 			
 			//Shanks anwenden
-			let factor = shanks.GetFactor(n: nn, cancel: cancel)
+			let factor = shanks.GetFactor(n: factors.unfactored, cancel: cancel)
 			if factor == 0 { break }
 			
 			//Ist der gefunden Faktor prim
 			if !factor.isPrime() {
 				//Der gefundene Faktor war nicht prim, dann zerlegen (unwahrscheinlich)
 				let subfactors = self.Factorize(ninput: factor, cancel: cancel)
-				for s in subfactors {
-					factors.append(s);
+				for s in subfactors.factors {
+					factors.Append(f:s)
 					if verbose { print("Factor:",s) }
-					nn = nn / s }
+//					nn = nn / s
+					
+				}
 			} else {
 				//Primfaktor abspalten
-				factors.append(factor)
+				factors.Append(f: factor)
 				if verbose { print("Factor:",factor) }
-				nn = nn / factor
+//				nn = nn / factor
 			}
 		}
 		
 		//3. Letzte Retturn Fermattest
-		while nn > 1 {
+		while factors.unfactored > 1 {
 			if verbose { print("Fermat") }
-			if nn.isPrime() {
-				factors.append(nn)
-				if verbose { print("Factor:",nn) }
+			if factors.unfactored.isPrime() {
+				factors.Append(f: factors.unfactored)
+//				if verbose { print("Factor:",nn) }
 				return factors
 			}
 			
-			let factor = lehman.GetFactor(n: nn, cancel: cancel)
+			let factor = lehman.GetFactor(n: factors.unfactored, cancel: cancel)
 			if factor.isPrime() {
-				factors.append(factor)
+				factors.Append(f: factor)
 			}
 			else {
 				let subfactors = Factorize(ninput: factor, cancel: cancel)
-				for s in subfactors {
-					factors.append(s)
+				for s in subfactors.factors {
+					factors.Append(f: s)
 					if verbose { print("Factor:",s) }
 				}
 			}
-			nn = nn / factor
+//			nn = nn / factor
 		}
 		return factors
 	}
@@ -142,10 +173,13 @@ public class PrimeFactorStrategy {
 		guard let n = BigUInt(s) else { return "" }
 		let factors = Factorize(ninput: n, cancel: nil)
 		var start = true
-		for f in factors {
+		for f in factors.factors {
 			if !start { ans = ans + "*" }
 			ans.append(String(f))
 			start = false
+		}
+		if factors.unfactored > 1 {
+			ans.append("*?")
 		}
 		return ans
 	}

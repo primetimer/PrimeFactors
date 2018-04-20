@@ -326,7 +326,7 @@ class RPNCalc : CalcCancellable {
 		let f = PrimeFactorStrategy()
 		let ans = f.Factorize(ninput: x, cancel: self)
 		popx()
-		for p in ans {
+		for p in ans.factors {
 			push(x: p)
 		}
 		stackstate = .factorized
