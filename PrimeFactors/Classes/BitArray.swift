@@ -6,9 +6,6 @@
 //
 
 import Foundation
-
-import Foundation
-
 class BitArray {
 	
 	let UIntInBits : UInt64 = UInt64(MemoryLayout<UInt64>.size * 8)
