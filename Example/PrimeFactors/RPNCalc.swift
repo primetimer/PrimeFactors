@@ -232,9 +232,9 @@ class RPNCalc : CalcCancellable {
 	
 	private func Rho() {
 		let rho = PrimeFaktorRho()
-		rho.canceldelegate = self
+		
 		if !x.isPrime() {
-			let factor = rho.GetFactor(n: x)
+			let factor = rho.GetFactor(n: x, cancel: self)
 			if factor < x && factor >= 2 {
 				push(x: factor)
 				stackstate = .valid
@@ -250,9 +250,9 @@ class RPNCalc : CalcCancellable {
 	
 	private func Squfof() {
 		let shanks = PrimeFactorShanks()
-		shanks.canceldelegate = self
+
 		if !x.isPrime() {
-			let factor = shanks.GetFactor(n: x)
+			let factor = shanks.GetFactor(n: x, cancel: self)
 			if factor < x && factor >= 2 {
 				push(x: factor)
 				stackstate = .valid
@@ -264,9 +264,9 @@ class RPNCalc : CalcCancellable {
 	
 	private func Lehman() {
 		let lehman = PrimeFactorLehman()
-		lehman.canceldelegate = self
+
 		if !x.isPrime() {
-			let factor = lehman.GetFactor(n: x)
+			let factor = lehman.GetFactor(n: x, cancel: self)
 			if factor < x && factor >= 2 {
 				push(x: factor)
 				stackstate = .valid
@@ -324,7 +324,7 @@ class RPNCalc : CalcCancellable {
 	}
 	private func factors() {
 		let f = PrimeFactorStrategy()
-		let ans = f.Factorize(ninput: x)
+		let ans = f.Factorize(ninput: x, cancel: self)
 		popx()
 		for p in ans {
 			push(x: p)

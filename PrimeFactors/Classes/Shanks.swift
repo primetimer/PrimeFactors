@@ -8,9 +8,9 @@
 import Foundation
 import BigInt
 
-public class PrimeFactorShanks : CalcCancellable, PFactor {
-	public func GetFactor(n: BigUInt) -> BigUInt {
-		return Shanks(n:n)
+public class PrimeFactorShanks : PFactor {
+	public func GetFactor(n: BigUInt, cancel: CalcCancelProt?) -> BigUInt {
+		return Shanks(n:n, cancel: cancel)
 	}
 	
 	
@@ -27,12 +27,15 @@ public class PrimeFactorShanks : CalcCancellable, PFactor {
 		smallprod.sort()
 	}
 	
-	override public init () {
-		super.init()
+	public init () {
 		SmallProducts()
 	}
 	
-	private func ShanksDivisor(n: BigUInt, k : BigUInt) -> BigUInt {
+	private func IsCancelled(cancel : CalcCancelProt?) -> Bool {
+		return cancel?.IsCancelled() ?? false
+	}
+	
+	private func ShanksDivisor(n: BigUInt, k : BigUInt, cancel: CalcCancelProt?) -> BigUInt {
 		let rn = BigInt(n.squareRoot())
 		if rn * rn == n { return BigUInt(rn) }
 		let kn  = BigInt(k * n)
@@ -45,7 +48,7 @@ public class PrimeFactorShanks : CalcCancellable, PFactor {
 		let imax = rkn2.squareRoot()
 		
 		for i in 0..<imax {
-			if IsCancelled() { return 0 }
+			if IsCancelled(cancel: cancel) { return 0 }
 			b1 = (rkn + p0) / q1
 			p1 = b1 * q1 - p0
 			let pdif : BigInt = BigInt(p0) - BigInt(p1)
@@ -60,7 +63,7 @@ public class PrimeFactorShanks : CalcCancellable, PFactor {
 					q0 = rq
 					q1 = (kn - p0*p0) / q0
 					while true {
-						if IsCancelled() { return 0 }
+						if IsCancelled(cancel: cancel) { return 0 }
 						b1 = (rkn + p0) / q1
 						p1 = b1 * q1 - p0
 						q2 = q0 + b1 * (p0 - p1)
@@ -79,7 +82,7 @@ public class PrimeFactorShanks : CalcCancellable, PFactor {
 		return 1
 	}
 	
-	public func Shanks(n:BigUInt)->BigUInt {
+	public func Shanks(n:BigUInt, cancel: CalcCancelProt?)->BigUInt {
 		
 		if n % 2 == 0 {	return 2 }
 		for p in firstp {
@@ -90,8 +93,8 @@ public class PrimeFactorShanks : CalcCancellable, PFactor {
 			if (k > 1) && (n % BigUInt(k) == 0) {
 				return BigUInt(k)
 			}
-			let  g = ShanksDivisor(n: n,k: BigUInt(k))
-			if IsCancelled() { return 0 }
+			let  g = ShanksDivisor(n: n,k: BigUInt(k), cancel: cancel)
+			if IsCancelled(cancel:  cancel) { return 0 }
 			if g != 1 { return g }
 		}
 		return 0 //Disaster

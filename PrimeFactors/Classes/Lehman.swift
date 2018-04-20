@@ -9,9 +9,9 @@
 import Foundation
 import BigInt
 
-public class PrimeFactorLehman : CalcCancellable, PFactor {
-	public func GetFactor(n: BigUInt) -> BigUInt {
-		return Lehman(n: n)
+public class PrimeFactorLehman : PFactor {
+	public func GetFactor(n: BigUInt, cancel: CalcCancelProt?) -> BigUInt {
+		return Lehman(n: n, cancel: cancel)
 	}
 	
 	private var sieve : PrimeSieve!
@@ -19,48 +19,50 @@ public class PrimeFactorLehman : CalcCancellable, PFactor {
 	var stopped = false
 	var skipTrialDivision = false
 	
-	override public init () {
-		super.init()
+	public init () {
 		sieve = PSieve.shared
 		trial = TrialDivision()
 	}
-	public init( sieve : PrimeSieve) {
-		super.init()
+	public init( sieve : PrimeSieve, cancel : CalcCancelProt) {
 		self.sieve = sieve
 		trial = TrialDivision(sieve: sieve)
 	}
 	
-	func Lehman(n: BigUInt) -> BigUInt
+	private func IsCancelled(prot: CalcCancelProt?) -> Bool {
+		return prot?.IsCancelled() ?? false
+	}
+	
+	func Lehman(n: BigUInt,cancel : CalcCancelProt?) -> BigUInt
 	{
 		stopped = false
 		if n <= 2 { return n }
 		//let n64 = UInt64(n)
 		var q : BigUInt = 1
 		if !self.skipTrialDivision {
-			q = LehmanStep1(n: n)
+			q = LehmanStep1(n: n, cancel: cancel)
 		}
 		if q > 1 { return BigUInt(q) }
 		if n < BigUInt(UInt64.max) {
-			let q64 = LehmanStep2(n: UInt64(n))
+			let q64 = LehmanStep2(n: UInt64(n),cancel: cancel)
 			q = BigUInt(q64)
 		} else {
-			q = LehmanStep2Big(n: n)
+			q = LehmanStep2Big(n: n, cancel: cancel)
 		}
 		return BigUInt(q)
 	}
 	
-	private func LehmanStep1(n: BigUInt)  ->  BigUInt {
+	private func LehmanStep1(n: BigUInt,cancel : CalcCancelProt?)  ->  BigUInt {
 		let upto = n.iroot3()
-		let divisor = trial.BigTrialDivision(n: n, upto: upto)
+		let divisor = trial.BigTrialDivision(n: n, upto: upto, cancel: cancel)
 		return divisor
 	}
 	
-	private func LehmanStep2(n: UInt64) -> UInt64 {
+	private func LehmanStep2(n: UInt64, cancel : CalcCancelProt?) -> UInt64 {
 		let n3 = n.iroot3()
 		let n6 = n3.squareRoot()
 		
 		for k in 1...n3 {
-			if IsCancelled() { return 0 }
+			if cancel?.IsCancelled() ?? false { return 0 }
 			let rk = k.squareRoot()
 			let rkn = (k*n).squareRoot()
 			
@@ -70,7 +72,7 @@ public class PrimeFactorLehman : CalcCancellable, PFactor {
 			
 			for a in amin...amax {
 				
-				if IsCancelled() { return 0 }
+				if cancel?.IsCancelled() ?? false { return 0 }
 				
 				//Converting to 128 bit
 				let a_128 = UInt128(a)
@@ -101,18 +103,18 @@ public class PrimeFactorLehman : CalcCancellable, PFactor {
 		return 1
 	}
 	
-	private func LehmanStep2Big(n: BigUInt) -> BigUInt {
+	private func LehmanStep2Big(n: BigUInt, cancel: CalcCancelProt?) -> BigUInt {
 		let n3 = n.iroot3()
 		let n6 = n3.squareRoot()
 		for k in 1...n3 {
-			if IsCancelled() { return 0 }
+			if cancel?.IsCancelled() ?? false { return 0 }
 			let rk = k.squareRoot()
 			let rkn = (k*n).squareRoot()
 			let amin = 2*rkn - 1
 			var amax = n6 / 4 / rk
 			amax = 1 + 2 * rkn + amax
 			for a in amin...amax {
-				if IsCancelled() { return 0 }
+				if cancel?.IsCancelled() ?? false { return 0 }
 				let a2 = a*a
 				let kn4 = k*n*4
 				if kn4 > a2 {

@@ -10,13 +10,13 @@ import Foundation
 import BigInt
 
 
-public class PrimeFaktorRho : CalcCancellable, PFactor {
-	public func GetFactor(n: BigUInt) -> BigUInt {
-		return Rho(n: n)
+public class PrimeFaktorRho : PFactor {
+	public func GetFactor(n: BigUInt, cancel : CalcCancelProt?) -> BigUInt {
+		return Rho(n: n, cancel: cancel)
 	}
 	
 	
-	override public init() {}
+	public init() {}
 	
 	var verbose = false
 	
@@ -36,7 +36,11 @@ public class PrimeFaktorRho : CalcCancellable, PFactor {
 		return count
 	}
 	
-	public func Rho(n: BigUInt, iterations: UInt64 = 0, c: UInt64 = 1)-> BigUInt {
+	private func IsCancelled(cancel: CalcCancelProt?) -> Bool {
+		return cancel?.IsCancelled() ?? false
+	}
+	
+	public func Rho(n: BigUInt, iterations: UInt64 = 0, c: UInt64 = 1, cancel: CalcCancelProt?)-> BigUInt {
 		
 		//Test gegen die ersten Primzahlen
 		for p in pfirst {
@@ -53,10 +57,11 @@ public class PrimeFaktorRho : CalcCancellable, PFactor {
 		var c0 = BigUInt(c)
 		let maxi = iterations > 0 ? iterations : rhomax
 		
+		
 		//Rho-Schleife
 		var rhoiter : UInt64 = 0
 		while rhoiter < maxi {
-			if IsCancelled() { return 0 }
+			if IsCancelled(cancel: cancel) { return 0 }
 			rhoiter = rhoiter + 1
 			rhox = (rhox * rhox + c0) % n0
 			rhoy = (rhoy * rhoy + c0) % n0

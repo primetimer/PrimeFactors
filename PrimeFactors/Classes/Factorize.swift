@@ -15,7 +15,7 @@ public class Factorize {
 		self.method = method
 	}
 	
-	public func Factorize(n: BigUInt) -> [BigUInt] {
+	public func Factorize(n: BigUInt, cancel: CalcCancelProt?) -> [BigUInt] {
 		
 		var nn = n
 		var factors : [BigUInt] = []
@@ -24,12 +24,12 @@ public class Factorize {
 				factors.append(nn)
 				return factors
 			}
-			let factor = method.GetFactor(n: nn)
+			let factor = method.GetFactor(n: nn, cancel: cancel)
 			if factor.isPrime() {
 				factors.append(factor)
 			}
 			else {
-				let subfactors = Factorize(n: factor)
+				let subfactors = Factorize(n: factor, cancel: cancel)
 				for s in subfactors { factors.append(s) }
 			}
 			nn = nn / factor
@@ -40,7 +40,7 @@ public class Factorize {
 	public func Factorize(s: String) -> String {
 		var ans = ""
 		guard let n = BigUInt(s) else { return "" }
-		let factors = Factorize(n: n)
+		let factors = Factorize(n: n, cancel: nil)
 		var start = true
 		for f in factors {
 			if !start { ans = ans + "*" }

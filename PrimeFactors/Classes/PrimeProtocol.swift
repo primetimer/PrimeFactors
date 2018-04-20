@@ -9,7 +9,7 @@ import Foundation
 import BigInt
 
 public protocol PFactor {
-	func GetFactor(n: BigUInt) -> BigUInt
+	func GetFactor(n: BigUInt, cancel: CalcCancelProt?) -> BigUInt
 }
 
 public protocol PrimeEnumerator {

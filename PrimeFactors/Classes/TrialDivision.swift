@@ -8,9 +8,9 @@
 import Foundation
 import BigInt
 
-public class TrialDivision : CalcCancellable, PFactor {
-	public func GetFactor(n: BigUInt) -> BigUInt {
-		let factor = BigTrialDivision(n: n)
+public class TrialDivision : PFactor {
+	public func GetFactor(n: BigUInt, cancel: CalcCancelProt?) -> BigUInt {
+		let factor = BigTrialDivision(n: n, cancel: cancel)
 		return factor
 	}
 
@@ -21,18 +21,20 @@ public class TrialDivision : CalcCancellable, PFactor {
 	
 	
 	private var sieve : PrimeSieve!
-	override public init() {
-		super.init()
+	public init() {
 		sieve = PSieve.shared
 		InitWheel()
 	}
 	public init(sieve : PrimeSieve) {
-		super.init()
 		self.sieve = sieve
 		InitWheel()
 	}
 	
-	public func TrialDivision(n: UInt64, upto: UInt64 = 0) -> UInt64 {
+	private func IsCancelled(cancel: CalcCancelProt?) -> Bool {
+		return cancel?.IsCancelled() ?? false
+	}
+	
+	public func TrialDivision(n: UInt64, upto: UInt64 = 0, cancel: CalcCancelProt?) -> UInt64 {
 		let limit = (upto > 0) ? upto : n.squareRoot()
 		let limitsieve = sieve.limit
 		if n < 2 { return 1 }
@@ -41,7 +43,7 @@ public class TrialDivision : CalcCancellable, PFactor {
 		}
 		var q = pfirst[pfirst.count-1]
 		
-		while !IsCancelled() {
+		while !IsCancelled(cancel: cancel) {
 			let offset = Int(wk[Int(q % mk)])
 			q = q + UInt64(offset)
 			if q > limit { break }
@@ -56,10 +58,10 @@ public class TrialDivision : CalcCancellable, PFactor {
 		return 0
 	}
 	
-	public func BigTrialDivision(n: BigUInt, upto: BigUInt = 0, startwith : BigUInt = 0) -> BigUInt {
+	public func BigTrialDivision(n: BigUInt, upto: BigUInt = 0, startwith : BigUInt = 0, cancel : CalcCancelProt?) -> BigUInt {
 		
 		if n < BigUInt(UINT64_MAX) {
-			let divisor64 = TrialDivision(n: UInt64(n), upto: UInt64(upto))
+			let divisor64 = TrialDivision(n: UInt64(n), upto: UInt64(upto), cancel: cancel)
 			return BigUInt(divisor64)
 		}
 		
@@ -71,7 +73,7 @@ public class TrialDivision : CalcCancellable, PFactor {
 		}
 		var q = UInt64(startwith)
 		if q == 0 { q = pfirst[pfirst.count-1] }
-		while !IsCancelled() {
+		while !IsCancelled(cancel: cancel) {
 			let offset = Int(wk[Int(q % mk)])
 			q = q + UInt64(offset)
 			if q > limit { break }

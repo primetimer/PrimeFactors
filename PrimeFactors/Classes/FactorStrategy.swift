@@ -21,6 +21,10 @@ public class PrimeFactorStrategy {
 		self.rho = PrimeFaktorRho()
 		self.shanks = PrimeFactorShanks()
 		self.lehman = PrimeFactorLehman()
+//		self.canceldelegate = cancel
+//		self.rho.canceldelegate = cancel
+//		self.shanks.canceldelegate = cancel
+//		self.lehman.canceldelegate = cancel
 	}
 	
 	private func QuickTrial(ninput: BigUInt) -> (rest : BigUInt, factors : [BigUInt]) {
@@ -39,7 +43,7 @@ public class PrimeFactorStrategy {
 		return (rest: nn, factors: factors)
 	}
 	
-	public func Factorize(ninput: BigUInt) -> [BigUInt] {
+	public func Factorize(ninput: BigUInt, cancel: CalcCancelProt?) -> [BigUInt] {
 		
 		//1. Probedivision fuer sehr kleine Faktoren
 		var (nn,factors) = QuickTrial(ninput: ninput)
@@ -57,7 +61,7 @@ public class PrimeFactorStrategy {
 			}
 			
 			//Suche mit Pollards-Methode
-			let factor = rho.GetFactor(n: nn)
+			let factor = rho.GetFactor(n: nn, cancel: cancel)
 			
 			//Nichts gefunden, dann weiter mit der nächsten Methode
 			if factor == 0 { break }
@@ -65,7 +69,7 @@ public class PrimeFactorStrategy {
 			//Ist der gefunden Faktor prim
 			if !factor.isPrime() {
 				//Der gefundene Faktor war nicht prim, dann zerlegen
-				let subfactors = self.Factorize(ninput: factor)
+				let subfactors = self.Factorize(ninput: factor, cancel: cancel)
 				for s in subfactors {
 					factors.append(s);
 					if verbose { print("Factor:",s) }
@@ -89,13 +93,13 @@ public class PrimeFactorStrategy {
 			}
 			
 			//Shanks anwenden
-			let factor = shanks.GetFactor(n: nn)
+			let factor = shanks.GetFactor(n: nn, cancel: cancel)
 			if factor == 0 { break }
 			
 			//Ist der gefunden Faktor prim
 			if !factor.isPrime() {
 				//Der gefundene Faktor war nicht prim, dann zerlegen (unwahrscheinlich)
-				let subfactors = self.Factorize(ninput: factor)
+				let subfactors = self.Factorize(ninput: factor, cancel: cancel)
 				for s in subfactors {
 					factors.append(s);
 					if verbose { print("Factor:",s) }
@@ -117,12 +121,12 @@ public class PrimeFactorStrategy {
 				return factors
 			}
 			
-			let factor = lehman.GetFactor(n: nn)
+			let factor = lehman.GetFactor(n: nn, cancel: cancel)
 			if factor.isPrime() {
 				factors.append(factor)
 			}
 			else {
-				let subfactors = Factorize(ninput: factor)
+				let subfactors = Factorize(ninput: factor, cancel: cancel)
 				for s in subfactors {
 					factors.append(s)
 					if verbose { print("Factor:",s) }
@@ -136,7 +140,7 @@ public class PrimeFactorStrategy {
 	public func Factorize(s: String) -> String {
 		var ans = ""
 		guard let n = BigUInt(s) else { return "" }
-		let factors = Factorize(ninput: n)
+		let factors = Factorize(ninput: n, cancel: nil)
 		var start = true
 		for f in factors {
 			if !start { ans = ans + "*" }
