@@ -18,7 +18,7 @@ public class PrimeFaktorRho : CalcCancellable, PFactor {
 	
 	override public init() {}
 	
-    var verbose = false
+	var verbose = false
 	
 	//Maximalzahl an Iteration
 	private var rhomax : UInt64 = 60000
@@ -77,7 +77,9 @@ public class PrimeFaktorRho : CalcCancellable, PFactor {
 			//Groessten gemeinsamen Teiler testen
 			if rhoiter % m == 0 {
 				let g = d.greatestCommonDivisor(with: n0)
-				if verbose { print(rhoiter,g) }
+				if verbose {
+					print(rhoiter,g)
+				}
 				if g > 1 {
 					if g != n0 {
 						return g
@@ -89,5 +91,6 @@ public class PrimeFaktorRho : CalcCancellable, PFactor {
 		return 0 //Nothing found
 	}
 }
+
 
 

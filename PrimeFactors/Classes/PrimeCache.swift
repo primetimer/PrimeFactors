@@ -9,7 +9,7 @@ import Foundation
 import BigInt
 
 public class PrimeCache {
-		
+	
 	private var pcache = NSCache<NSString, NSNumber>()
 	static public var shared = PrimeCache()
 	private init() {
@@ -35,7 +35,7 @@ public class PrimeCache {
 
 public class PrimeCalculator : CalcCancellable, PrimeEnumerator {
 	
-	internal let pfirst : [UInt64] = [2,3,5,7,11,13,17,19,23,29,31,37,41,43]
+	internal let pfirst : [UInt64] = [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,71,73,79,83,89,97]
 	internal var mk : UInt64 = 1		//Primorial up to limit2
 	internal var wk : [UInt16] = []
 	internal var sieve : PrimeSieve!
@@ -104,7 +104,7 @@ public class PrimeCalculator : CalcCancellable, PrimeEnumerator {
 			spoke = spoke + dif
 		}
 		p = p + BigUInt(dif)
-		while true {			
+		while true {
 			if PrimeCache.shared.IsPrime(p: p) {
 				return p
 			}
@@ -123,7 +123,7 @@ public class PrimeCalculator : CalcCancellable, PrimeEnumerator {
 			while !sieve.IsPrime(n: n64) {
 				n64 = n64 - 2
 			}
-				return BigUInt(n64)
+			return BigUInt(n64)
 		}
 		var p = n
 		var spoke : Int = Int(p % BigUInt(self.mk))
@@ -145,10 +145,10 @@ public class PrimeCalculator : CalcCancellable, PrimeEnumerator {
 }
 
 public class ExtendedPrimeCalculator : PrimeCalculator {
-
+	
 	//This routine sounds complexer than neccessary
 	//It is optimized with a wheel, so the amount of testes Numbers is reduced
-
+	
 	public func NextTwin(n: BigUInt) -> BigUInt {
 		
 		var p = NextPrime(n: n)
@@ -181,7 +181,7 @@ public class ExtendedPrimeCalculator : PrimeCalculator {
 				spoke = (spoke + Int(wk[spoke])) % Int(mk)
 				dif = dif + Int(wk[spoke])
 			} while wk[spoke] != 2
-				
+			
 			p = p + BigUInt(dif)
 		}
 		//Never come here
@@ -232,5 +232,6 @@ public class ExtendedPrimeCalculator : PrimeCalculator {
 		return p
 	}
 }
+
 
 
