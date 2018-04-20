@@ -13,23 +13,26 @@ public struct PrimeFactors {
 	public var n : BigUInt
 	public var factors : [BigUInt]
 	public var unfactored : BigUInt
-	private var _completed = false
-	mutating func completed() -> Bool {
-		if _completed { return true }
-		var prod : BigUInt = 1
-		for f in factors {
-			prod = prod * f
+
+	func completed() -> Bool {
+		if unfactored == 1 {
+			return true
 		}
-		if prod < n { return false }
-		if prod > n { assert(false); return false }
-		_completed = true
-		return true
+		return false
 	}
 	
 	public init(n: BigUInt) {
 		self.n = n
 		self.unfactored = n
 		self.factors = []
+		
+		if n < 2 {
+			unfactored = 1
+		}
+		if PrimeCache.shared.IsPrime(p: n) {
+			factors.append(n)
+			unfactored = 1
+		}
 	}
 	mutating func Append(f: BigUInt) {
 		factors.append(f)
