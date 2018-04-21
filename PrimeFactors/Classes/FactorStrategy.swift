@@ -58,6 +58,10 @@ public class PrimeFactorStrategy {
 //		self.lehman.canceldelegate = cancel
 	}
 	
+	private func IsCancelled(cancel: CalcCancelProt?) -> Bool {
+		return cancel?.IsCancelled() ?? false
+	}
+	
 	private func QuickTrial(ninput: BigUInt) -> PrimeFactors {
 		if verbose { print ("QuickTrial") }
 		var factors = PrimeFactors(n: ninput)
@@ -78,10 +82,12 @@ public class PrimeFactorStrategy {
 		//1. Probedivision fuer sehr kleine Faktoren
 		var factors = QuickTrial(ninput: ninput)
 		if factors.unfactored == 1 { return factors }
+		if IsCancelled(cancel: cancel) { return factors }
 		
 		//2. Pollards-Rho Methode fuer kleine Zahlen zur Abspaltung von Faktoren bis zur vierten Wurzel
 		let rhoupto = ninput.squareRoot().squareRoot()
 		while factors.unfactored > rhoupto { //Heuristik
+			if IsCancelled(cancel: cancel) { return factors }
 			if verbose { print ("Rho") }
 			//Rest schon prim, dann fertig
 			if factors.unfactored.isPrime() {
@@ -116,6 +122,7 @@ public class PrimeFactorStrategy {
 		
 		//Wechsle zu Shanks
 		while factors.unfactored > 1 {
+			if IsCancelled(cancel: cancel) { return factors }
 			if verbose { print("Shanks") }
 			//Rest schon prim, dann fertig
 			if factors.unfactored.isPrime() {
@@ -148,6 +155,7 @@ public class PrimeFactorStrategy {
 		
 		//3. Letzte Retturn Fermattest
 		while factors.unfactored > 1 {
+			if IsCancelled(cancel: cancel) { return factors }
 			if verbose { print("Fermat") }
 			if factors.unfactored.isPrime() {
 				factors.Append(f: factors.unfactored)
