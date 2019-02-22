@@ -40,6 +40,7 @@ public class PrimeFactors : NSObject {
 	}
 }
 
+
 public class PrimeFactorStrategy {
 	
 	var verbose = false
