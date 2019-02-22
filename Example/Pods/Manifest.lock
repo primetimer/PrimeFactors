@@ -10,15 +10,20 @@ DEPENDENCIES:
   - PrimeFactors (from `../`)
   - SipHash (~> 1.2)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BigInt
+    - SipHash
+
 EXTERNAL SOURCES:
   PrimeFactors:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   BigInt: 8e8a52161c745cd3ab78e3dc346a9fbee51e6cf6
-  PrimeFactors: 8ca435ced44b6def3373cd935fe280f305562cda
+  PrimeFactors: 3c27469266ae1618a60abdf43e53eb4a602d0842
   SipHash: c6e9e43e9c531b5bc6602545130c26194a6d31ce
 
-PODFILE CHECKSUM: bcea8289a25cb6aa795f96f0d396ad02b8d2a830
+PODFILE CHECKSUM: e6bc0e1b766b308217c6be31f6b18db4a72b7d65
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3

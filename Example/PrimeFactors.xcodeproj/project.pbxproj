@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A3966CA6616402D5E02FA84 /* Pods_PrimeFactorsWatchExample_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71190AAFAAB5FAD96141D206 /* Pods_PrimeFactorsWatchExample_Extension.framework */; };
 		480F217747BB0BE114FA2A24 /* Pods_PrimeFactors_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD42C7019EF968E858496D36 /* Pods_PrimeFactors_Tests.framework */; };
 		54749C451FA1B96200C94423 /* RPNInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54749C391FA1B96100C94423 /* RPNInfo.swift */; };
 		54749C461FA1B96200C94423 /* digital-7mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54749C3A1FA1B96100C94423 /* digital-7mono.ttf */; };
@@ -25,6 +26,13 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		76E9F4480ECF11236D415C9A /* Pods_PrimeFactors_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D961718A229EE9FE1AEF84C4 /* Pods_PrimeFactors_Example.framework */; };
+		84AF05432220075A00772C00 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AF05412220075A00772C00 /* Interface.storyboard */; };
+		84AF05452220075B00772C00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84AF05442220075B00772C00 /* Assets.xcassets */; };
+		84AF054C2220075B00772C00 /* PrimeFactorsWatchExample Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84AF054B2220075B00772C00 /* PrimeFactorsWatchExample Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84AF05512220075B00772C00 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF05502220075B00772C00 /* InterfaceController.swift */; };
+		84AF05532220075B00772C00 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF05522220075B00772C00 /* ExtensionDelegate.swift */; };
+		84AF05552220075C00772C00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84AF05542220075C00772C00 /* Assets.xcassets */; };
+		84AF05592220075C00772C00 /* PrimeFactorsWatchExample.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 84AF053F2220075A00772C00 /* PrimeFactorsWatchExample.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +43,53 @@
 			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
 			remoteInfo = PrimeFactors;
 		};
+		84AF054D2220075B00772C00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84AF054A2220075B00772C00;
+			remoteInfo = "PrimeFactorsWatchExample Extension";
+		};
+		84AF05572220075C00772C00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84AF053E2220075A00772C00;
+			remoteInfo = PrimeFactorsWatchExample;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84AF055D2220075C00772C00 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				84AF054C2220075B00772C00 /* PrimeFactorsWatchExample Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84AF05612220075C00772C00 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				84AF05592220075C00772C00 /* PrimeFactorsWatchExample.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2241DC95B60A73668061BA1C /* Pods-PrimeFactors_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeFactors_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrimeFactors_Example/Pods-PrimeFactors_Example.release.xcconfig"; sourceTree = "<group>"; };
 		349A03B2BD3003F62894FCD6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3B918B1A6A435750B98888B2 /* Pods-PrimeFactors_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeFactors_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrimeFactors_Tests/Pods-PrimeFactors_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4E80247E405568280CA839E1 /* Pods-PrimeFactors_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeFactors_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrimeFactors_Example/Pods-PrimeFactors_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		4E88F20B3C91EBD3B3D226EA /* Pods_PrimeFactorsWatchExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeFactorsWatchExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F03085ED495027771CD3E3F /* PrimeFactors.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PrimeFactors.podspec; path = ../PrimeFactors.podspec; sourceTree = "<group>"; };
 		54749C391FA1B96100C94423 /* RPNInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPNInfo.swift; sourceTree = "<group>"; };
 		54749C3A1FA1B96100C94423 /* digital-7mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "digital-7mono.ttf"; path = "PrimeFactors/digital-7mono.ttf"; sourceTree = "<group>"; };
@@ -63,10 +111,22 @@
 		607FACE51AFB9204008FA782 /* PrimeFactors_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeFactors_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		71190AAFAAB5FAD96141D206 /* Pods_PrimeFactorsWatchExample_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeFactorsWatchExample_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84AF053F2220075A00772C00 /* PrimeFactorsWatchExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimeFactorsWatchExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84AF05422220075A00772C00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		84AF05442220075B00772C00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84AF05462220075B00772C00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84AF054B2220075B00772C00 /* PrimeFactorsWatchExample Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PrimeFactorsWatchExample Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84AF05502220075B00772C00 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		84AF05522220075B00772C00 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		84AF05542220075C00772C00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84AF05562220075C00772C00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C05FAF0CED049D4EAE16404 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		BD42C7019EF968E858496D36 /* Pods_PrimeFactors_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeFactors_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCDBD63B8889A6F513D6116E /* Pods-PrimeFactorsWatchExample Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeFactorsWatchExample Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrimeFactorsWatchExample Extension/Pods-PrimeFactorsWatchExample Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		D961718A229EE9FE1AEF84C4 /* Pods_PrimeFactors_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeFactors_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CDDFFDBE86032AA8B838A6 /* Pods-PrimeFactors_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeFactors_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrimeFactors_Tests/Pods-PrimeFactors_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE4D0493D6B7483E02A80E31 /* Pods-PrimeFactorsWatchExample Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeFactorsWatchExample Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrimeFactorsWatchExample Extension/Pods-PrimeFactorsWatchExample Extension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +143,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				480F217747BB0BE114FA2A24 /* Pods_PrimeFactors_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67AF6A83D8BC872E3945BD4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84AF05482220075B00772C00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A3966CA6616402D5E02FA84 /* Pods_PrimeFactorsWatchExample_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +185,8 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for PrimeFactors */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				84AF05402220075A00772C00 /* PrimeFactorsWatchExample */,
+				84AF054F2220075B00772C00 /* PrimeFactorsWatchExample Extension */,
 				607FACD11AFB9204008FA782 /* Products */,
 				80A80DFA407871EBE612B3C8 /* Pods */,
 				D002B4C30F4E52A25FCE9F7A /* Frameworks */,
@@ -121,6 +198,8 @@
 			children = (
 				607FACD01AFB9204008FA782 /* PrimeFactors_Example.app */,
 				607FACE51AFB9204008FA782 /* PrimeFactors_Tests.xctest */,
+				84AF053F2220075A00772C00 /* PrimeFactorsWatchExample.app */,
+				84AF054B2220075B00772C00 /* PrimeFactorsWatchExample Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,8 +264,31 @@
 				2241DC95B60A73668061BA1C /* Pods-PrimeFactors_Example.release.xcconfig */,
 				E2CDDFFDBE86032AA8B838A6 /* Pods-PrimeFactors_Tests.debug.xcconfig */,
 				3B918B1A6A435750B98888B2 /* Pods-PrimeFactors_Tests.release.xcconfig */,
+				CCDBD63B8889A6F513D6116E /* Pods-PrimeFactorsWatchExample Extension.debug.xcconfig */,
+				FE4D0493D6B7483E02A80E31 /* Pods-PrimeFactorsWatchExample Extension.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		84AF05402220075A00772C00 /* PrimeFactorsWatchExample */ = {
+			isa = PBXGroup;
+			children = (
+				84AF05412220075A00772C00 /* Interface.storyboard */,
+				84AF05442220075B00772C00 /* Assets.xcassets */,
+				84AF05462220075B00772C00 /* Info.plist */,
+			);
+			path = PrimeFactorsWatchExample;
+			sourceTree = "<group>";
+		};
+		84AF054F2220075B00772C00 /* PrimeFactorsWatchExample Extension */ = {
+			isa = PBXGroup;
+			children = (
+				84AF05502220075B00772C00 /* InterfaceController.swift */,
+				84AF05522220075B00772C00 /* ExtensionDelegate.swift */,
+				84AF05542220075C00772C00 /* Assets.xcassets */,
+				84AF05562220075C00772C00 /* Info.plist */,
+			);
+			path = "PrimeFactorsWatchExample Extension";
 			sourceTree = "<group>";
 		};
 		D002B4C30F4E52A25FCE9F7A /* Frameworks */ = {
@@ -194,6 +296,8 @@
 			children = (
 				D961718A229EE9FE1AEF84C4 /* Pods_PrimeFactors_Example.framework */,
 				BD42C7019EF968E858496D36 /* Pods_PrimeFactors_Tests.framework */,
+				4E88F20B3C91EBD3B3D226EA /* Pods_PrimeFactorsWatchExample.framework */,
+				71190AAFAAB5FAD96141D206 /* Pods_PrimeFactorsWatchExample_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -210,11 +314,12 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				B59B61822146C8F0EB9B63D4 /* [CP] Embed Pods Frameworks */,
-				F100D7AF2F1E2E937B7053AB /* [CP] Copy Pods Resources */,
+				84AF05612220075C00772C00 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				84AF05582220075C00772C00 /* PBXTargetDependency */,
 			);
 			name = PrimeFactors_Example;
 			productName = PrimeFactors;
@@ -229,8 +334,6 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				1C8C1F1FDFE3F6C6AE7DA458 /* [CP] Embed Pods Frameworks */,
-				811965560F8F1D49803B913B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,13 +345,50 @@
 			productReference = 607FACE51AFB9204008FA782 /* PrimeFactors_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		84AF053E2220075A00772C00 /* PrimeFactorsWatchExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84AF055E2220075C00772C00 /* Build configuration list for PBXNativeTarget "PrimeFactorsWatchExample" */;
+			buildPhases = (
+				84AF053D2220075A00772C00 /* Resources */,
+				84AF055D2220075C00772C00 /* Embed App Extensions */,
+				67AF6A83D8BC872E3945BD4D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84AF054E2220075B00772C00 /* PBXTargetDependency */,
+			);
+			name = PrimeFactorsWatchExample;
+			productName = PrimeFactorsWatchExample;
+			productReference = 84AF053F2220075A00772C00 /* PrimeFactorsWatchExample.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		84AF054A2220075B00772C00 /* PrimeFactorsWatchExample Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84AF055A2220075C00772C00 /* Build configuration list for PBXNativeTarget "PrimeFactorsWatchExample Extension" */;
+			buildPhases = (
+				FD6165190EF912319B35E825 /* [CP] Check Pods Manifest.lock */,
+				84AF05472220075B00772C00 /* Sources */,
+				84AF05482220075B00772C00 /* Frameworks */,
+				84AF05492220075B00772C00 /* Resources */,
+				E492C8127AD6F4A12514F8C6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PrimeFactorsWatchExample Extension";
+			productName = "PrimeFactorsWatchExample Extension";
+			productReference = 84AF054B2220075B00772C00 /* PrimeFactorsWatchExample Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
@@ -262,6 +402,16 @@
 						DevelopmentTeam = DS739J79LU;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
+					84AF053E2220075A00772C00 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = DS739J79LU;
+						ProvisioningStyle = Automatic;
+					};
+					84AF054A2220075B00772C00 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = DS739J79LU;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -280,6 +430,8 @@
 			targets = (
 				607FACCF1AFB9204008FA782 /* PrimeFactors_Example */,
 				607FACE41AFB9204008FA782 /* PrimeFactors_Tests */,
+				84AF053E2220075A00772C00 /* PrimeFactorsWatchExample */,
+				84AF054A2220075B00772C00 /* PrimeFactorsWatchExample Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -307,24 +459,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84AF053D2220075A00772C00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84AF05452220075B00772C00 /* Assets.xcassets in Resources */,
+				84AF05432220075A00772C00 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84AF05492220075B00772C00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84AF05552220075C00772C00 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1C8C1F1FDFE3F6C6AE7DA458 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrimeFactors_Tests/Pods-PrimeFactors_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		33F7E9A9FCE41E0EAB6F67BE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -361,21 +515,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		811965560F8F1D49803B913B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrimeFactors_Tests/Pods-PrimeFactors_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B59B61822146C8F0EB9B63D4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -383,9 +522,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PrimeFactors_Example/Pods-PrimeFactors_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
-				"${BUILT_PRODUCTS_DIR}/PrimeFactors/PrimeFactors.framework",
-				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+				"${BUILT_PRODUCTS_DIR}/BigInt-iOS/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/PrimeFactors-iOS/PrimeFactors.framework",
+				"${BUILT_PRODUCTS_DIR}/SipHash-iOS/SipHash.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -398,19 +537,52 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrimeFactors_Example/Pods-PrimeFactors_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F100D7AF2F1E2E937B7053AB /* [CP] Copy Pods Resources */ = {
+		E492C8127AD6F4A12514F8C6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PrimeFactorsWatchExample Extension/Pods-PrimeFactorsWatchExample Extension-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BigInt-watchOS/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/PrimeFactors-watchOS/PrimeFactors.framework",
+				"${BUILT_PRODUCTS_DIR}/SipHash-watchOS/SipHash.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PrimeFactors.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrimeFactors_Example/Pods-PrimeFactors_Example-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrimeFactorsWatchExample Extension/Pods-PrimeFactorsWatchExample Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD6165190EF912319B35E825 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrimeFactorsWatchExample Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -438,6 +610,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84AF05472220075B00772C00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84AF05532220075B00772C00 /* ExtensionDelegate.swift in Sources */,
+				84AF05512220075B00772C00 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -445,6 +626,16 @@
 			isa = PBXTargetDependency;
 			target = 607FACCF1AFB9204008FA782 /* PrimeFactors_Example */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
+		};
+		84AF054E2220075B00772C00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84AF054A2220075B00772C00 /* PrimeFactorsWatchExample Extension */;
+			targetProxy = 84AF054D2220075B00772C00 /* PBXContainerItemProxy */;
+		};
+		84AF05582220075C00772C00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84AF053E2220075A00772C00 /* PrimeFactorsWatchExample */;
+			targetProxy = 84AF05572220075C00772C00 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -479,6 +670,14 @@
 				607FACDF1AFB9204008FA782 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		84AF05412220075A00772C00 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84AF05422220075A00772C00 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -657,6 +856,126 @@
 			};
 			name = Release;
 		};
+		84AF055B2220075C00772C00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCDBD63B8889A6F513D6116E /* Pods-PrimeFactorsWatchExample Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = DS739J79LU;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "PrimeFactorsWatchExample Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "esjot.PFactors.demo.PFactors-Example.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		84AF055C2220075C00772C00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE4D0493D6B7483E02A80E31 /* Pods-PrimeFactorsWatchExample Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DS739J79LU;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "PrimeFactorsWatchExample Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "esjot.PFactors.demo.PFactors-Example.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		84AF055F2220075C00772C00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = DS739J79LU;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = PrimeFactorsWatchExample_Extension;
+				INFOPLIST_FILE = PrimeFactorsWatchExample/Info.plist;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "esjot.PFactors.demo.PFactors-Example.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		84AF05602220075C00772C00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DS739J79LU;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = PrimeFactorsWatchExample_Extension;
+				INFOPLIST_FILE = PrimeFactorsWatchExample/Info.plist;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "esjot.PFactors.demo.PFactors-Example.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -683,6 +1002,24 @@
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,
 				607FACF41AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84AF055A2220075C00772C00 /* Build configuration list for PBXNativeTarget "PrimeFactorsWatchExample Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84AF055B2220075C00772C00 /* Debug */,
+				84AF055C2220075C00772C00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84AF055E2220075C00772C00 /* Build configuration list for PBXNativeTarget "PrimeFactorsWatchExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84AF055F2220075C00772C00 /* Debug */,
+				84AF05602220075C00772C00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

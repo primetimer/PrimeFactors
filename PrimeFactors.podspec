@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'PrimeFactors'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of PrimeFactors.'
+  s.summary          = 'Prime Number detection and Decomposition'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -28,7 +28,8 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/primetimer/PrimeFactors.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+#s.ios.deployment_target = '8.0'
+s.platforms = { :ios => "8.0", :osx => "10.7", :watchos => "2.0", :tvos => "9.0" }
 
   s.dependency 'BigInt'
   #s.source_files = 'PFactors/Classes/*.{swift}'

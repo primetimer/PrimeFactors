@@ -63,20 +63,35 @@ public class PrimeFactorStrategy {
 		return cancel?.IsCancelled() ?? false
 	}
 	
-	private func QuickTrial(ninput: BigUInt) -> PrimeFactors {
-		if verbose { print ("QuickTrial") }
-		var factors = PrimeFactors(n: ninput)
-		for p in first {
-			let bigp = BigUInt(p)
-			if bigp * bigp > factors.unfactored { break }
-			while factors.unfactored % bigp == 0 {
-//				nn = nn / bigp
-				factors.Append(f: bigp)
-				if verbose { print("Factor:",bigp) }
-			}
-		}
-		return factors
-	}
+    private func QuickTrial(ninput: BigUInt) -> PrimeFactors {
+        if verbose { print ("QuickTrial") }
+        var factors = PrimeFactors(n: ninput)
+        for p in first {
+            let bigp = BigUInt(p)
+            if bigp * bigp > factors.unfactored { break }
+            while factors.unfactored % bigp == 0 {
+                //                nn = nn / bigp
+                factors.Append(f: bigp)
+                factors.unfactored = factors.unfactored / bigp
+                if verbose { print("Factor:",bigp) }
+            }
+        }
+        return factors
+    }
+//    private func QuickTrial(ninput: BigUInt) -> PrimeFactors {
+//        if verbose { print ("QuickTrial") }
+//        var factors = PrimeFactors(n: ninput)
+//        for p in first {
+//            let bigp = BigUInt(p)
+//            if bigp * bigp > factors.unfactored { break }
+//            while factors.unfactored % bigp == 0 {
+////                nn = nn / bigp
+//                factors.Append(f: bigp)
+//                if verbose { print("Factor:",bigp) }
+//            }
+//        }
+//        return factors
+//    }
 	
 	public func Factorize(ninput: BigUInt, cancel: CalcCancelProt?) -> PrimeFactors {
 		

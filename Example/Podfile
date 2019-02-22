@@ -13,3 +13,9 @@ target 'PrimeFactors_Example' do
 	end
 end
 
+target 'PrimeFactorsWatchExample Extension' do
+    pod 'PrimeFactors', :path => '../'
+    pod 'BigInt', '~> 3.0'
+    pod 'SipHash', '~>1.2'
+end
+

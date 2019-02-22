@@ -1,7 +1,7 @@
 {
   "name": "PrimeFactors",
   "version": "0.1.0",
-  "summary": "A short description of PrimeFactors.",
+  "summary": "Prime Number detection and Decomposition",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/primetimer/PrimeFactors",
   "license": {
@@ -16,7 +16,10 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "8.0",
+    "osx": "10.7",
+    "watchos": "2.0",
+    "tvos": "9.0"
   },
   "dependencies": {
     "BigInt": [
