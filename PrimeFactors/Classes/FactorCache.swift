@@ -114,3 +114,88 @@ public class FactorCache {
         return ret
     }
 }
+
+public class FactorsWithPot {
+    private (set) var factors : [FactorWithPot]
+    private (set) var unfactored : BigUInt!
+    private (set) var n : BigUInt!
+    
+    convenience init(n: BigUInt, cancel : CalcCancelProt?) {
+        let pf = FactorCache.shared.Factor(p: n, cancel: cancel)
+        self.init(pf: pf)
+    }
+    init(pf : PrimeFactors) {
+        self.unfactored = pf.unfactored
+        factors = []
+        
+        var pot = 1
+        for (index,f) in pf.factors.enumerated() {
+            if index+1 == pf.factors.count {
+                let fwithpot = FactorWithPot(f: f, e: pot)
+                factors.append(fwithpot)
+            } else {
+                if f == pf.factors[index+1] {
+                    pot = pot + 1
+                }
+                else {
+                    let fwithpot = FactorWithPot(f: f, e: pot)
+                    factors.append(fwithpot)
+                    pot = 1
+                }
+            }
+        }
+    }
+}
+
+struct FactorWithPot {
+    init(f: BigUInt) {
+        self.f = f
+        self.e = 1
+    }
+    init(f: BigUInt, e: Int) {
+        self.f = f
+        self.e = e
+    }
+    
+    var f: BigUInt = 0
+    var e: Int = 0
+}
+
+
+public extension FactorCache {
+    public func Latex(n: BigUInt, withpot : Bool, cancel: CalcCancelProt?) -> String? {
+        if n<2 { return nil }
+        let factors = Factor(p: n,cancel: cancel)
+        if cancel?.IsCancelled() ?? false { return nil }
+        if factors.factors.count < 2 { return nil }
+        var latex = String(n) + "="
+        
+        if withpot {
+            let fwithpots = FactorsWithPot(n: n, cancel: cancel)
+            for (index,f) in fwithpots.factors.enumerated() {
+                if index > 0 { latex = latex + "\\cdot{" }
+                latex = latex + String(f.f)
+                if f.e > 1 {
+                    latex = latex + "^{" + String(f.e) + "}"
+                }
+                if index>0 {
+                    latex = latex + "}"
+                }
+            }
+        } else {
+            for (index,f) in factors.factors.enumerated() {
+                if index > 0 { latex = latex + "\\cdot{" }
+                latex = latex + String(f)
+                if index > 0 { latex = latex + "}" }
+            }
+        }
+        if factors.unfactored > 1 {
+            latex = latex + "\\cdot{?}"
+        }
+        //latex = latex + "\\\\"
+        return latex
+    }
+    
+    
+}
+
