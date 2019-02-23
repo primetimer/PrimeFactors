@@ -71,6 +71,8 @@
 		806899E11A65F2F567C5C66B3AEAD3C8 /* SipHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4013B4738295E6303FD4F2BFE5A17496 /* SipHash.framework */; };
 		807AB587838E58F59C369B393C7BC362 /* Sieve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9413D5B9921B7E01AE6B25211C1FE4 /* Sieve.swift */; };
 		82993D25B92AAD2E774AAC3837C1DEE1 /* Bitwise Ops.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34F82E23FB418F60C06431AABDF16E2 /* Bitwise Ops.swift */; };
+		8441EC802221A5A20046B0D0 /* FactorCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441EC7F2221A5A20046B0D0 /* FactorCache.swift */; };
+		8441EC812221A5A20046B0D0 /* FactorCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441EC7F2221A5A20046B0D0 /* FactorCache.swift */; };
 		84DF1E824616A4F933231A16E459823F /* Primitive Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBCCE207305C91E054F11A8BD3EA3DF /* Primitive Types.swift */; };
 		864DDA1A6730CD8A6D8F4095BAF1A6DD /* PUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768722D9A5B1C155B0D59892BAAE1EAC /* PUtil.swift */; };
 		866CCC1072F14B373BBC6F2996D4BE09 /* PrimeCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59E5FCBACFC1FCB5837D74A6D9F8BD /* PrimeCache.swift */; };
@@ -223,7 +225,7 @@
 /* Begin PBXFileReference section */
 		0003C6E155EB51B0504A91CBD7214B76 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../PrimeFactors-watchOS/Info.plist"; sourceTree = "<group>"; };
 		005CF29AB82E40F0AAD4F981AF5441CE /* BigInt-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "BigInt-watchOS-prefix.pch"; path = "../BigInt-watchOS/BigInt-watchOS-prefix.pch"; sourceTree = "<group>"; };
-		044899F956D939A5E430E4250BC4E095 /* PrimeFactors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PrimeFactors.framework; path = "PrimeFactors-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		044899F956D939A5E430E4250BC4E095 /* PrimeFactors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrimeFactors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		067CCF141ED988F0A9A249A1B1E90C60 /* Integer Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Integer Conversion.swift"; path = "sources/Integer Conversion.swift"; sourceTree = "<group>"; };
 		06B6762A9C6CFF76CB8B20601E70399F /* Pods-PrimeFactorsWatchExample Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrimeFactorsWatchExample Extension-umbrella.h"; sourceTree = "<group>"; };
 		0DE207C92D166B8E636A7597709D2393 /* Words and Bits.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Words and Bits.swift"; path = "sources/Words and Bits.swift"; sourceTree = "<group>"; };
@@ -233,7 +235,7 @@
 		194B4AEB2D058E955EFFA988F5F64EC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		1CC78396AD987AFE5A10C6F43A607FBD /* Pods-PrimeFactorsWatchExample Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrimeFactorsWatchExample Extension-dummy.m"; sourceTree = "<group>"; };
 		1EEC647DFECA80E0B9C4077E0454460F /* Pods-PrimeFactors_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PrimeFactors_Example.modulemap"; sourceTree = "<group>"; };
-		205CC70ED57E9AA91D61179E5B792D8A /* Pods_PrimeFactors_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PrimeFactors_Tests.framework; path = "Pods-PrimeFactors_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		205CC70ED57E9AA91D61179E5B792D8A /* Pods_PrimeFactors_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeFactors_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D9DBDE2C20716AB6E52931053D83F5 /* Pods-PrimeFactorsWatchExample Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PrimeFactorsWatchExample Extension.modulemap"; sourceTree = "<group>"; };
 		212CAE4C980AB8DF8F2BEC2555156BAC /* SipHash-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SipHash-watchOS-dummy.m"; path = "../SipHash-watchOS/SipHash-watchOS-dummy.m"; sourceTree = "<group>"; };
 		22B4B7DD715A45620D762A688E043FEA /* SipHashable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipHashable.swift; path = SipHash/SipHashable.swift; sourceTree = "<group>"; };
@@ -242,7 +244,7 @@
 		25F928683E640F6B8A2545DF3BE9C235 /* Comparable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Comparable.swift; path = sources/Comparable.swift; sourceTree = "<group>"; };
 		29484FB64F3B727D36856350CE3B94F8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A5C5ADDB9F45564757554E2E6AA0DCA /* BigInt-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "BigInt-iOS.xcconfig"; sourceTree = "<group>"; };
-		2C0940504E94593838508BD28700BBB4 /* PrimeFactors.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = PrimeFactors.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2C0940504E94593838508BD28700BBB4 /* PrimeFactors.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = PrimeFactors.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		31A307BC3D6CFDB46D1B5753A35CA950 /* Pods-PrimeFactorsWatchExample Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrimeFactorsWatchExample Extension-acknowledgements.plist"; sourceTree = "<group>"; };
 		324D07B73D5DD708D90A577262A6B448 /* Pods-PrimeFactors_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrimeFactors_Tests-dummy.m"; sourceTree = "<group>"; };
 		325A13F5BFC90684392C7621F9F94FFE /* TrialDivision.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TrialDivision.swift; path = PrimeFactors/Classes/TrialDivision.swift; sourceTree = "<group>"; };
@@ -263,8 +265,8 @@
 		561233F8C44CE9D460B34857A9886DE4 /* PrimeProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrimeProtocol.swift; path = PrimeFactors/Classes/PrimeProtocol.swift; sourceTree = "<group>"; };
 		565BA997A8150849E901FF56189AE024 /* PrimeFactors-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PrimeFactors-iOS.xcconfig"; sourceTree = "<group>"; };
 		5782B2D18285B62B8B46440E663561F4 /* BigInt-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "BigInt-watchOS.xcconfig"; path = "../BigInt-watchOS/BigInt-watchOS.xcconfig"; sourceTree = "<group>"; };
-		5B90416DA997DCAD99AC74517686BEC4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		5BF0238E7B58552EECE96C769A1747A3 /* BigInt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BigInt.framework; path = "BigInt-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B90416DA997DCAD99AC74517686BEC4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		5BF0238E7B58552EECE96C769A1747A3 /* BigInt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BigInt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C518E09B3E60DA98D52336265D7B6C6 /* PrimeFactors-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PrimeFactors-iOS-prefix.pch"; sourceTree = "<group>"; };
 		5CAEE85B67BE617B64C4939CCD4F242E /* GCD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GCD.swift; path = sources/GCD.swift; sourceTree = "<group>"; };
 		5CB7B656453B80F8C42D023F8BE7A0ED /* Pods-PrimeFactors_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrimeFactors_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -274,33 +276,34 @@
 		60D761178E158A4CBFA70C2868EB5E30 /* Pods-PrimeFactors_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrimeFactors_Tests-resources.sh"; sourceTree = "<group>"; };
 		62887537C77CEEBD959DECE769A0B2B3 /* BigInt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BigInt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63429D4D70F2414F440F348E4EADF1B7 /* Shifts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shifts.swift; path = sources/Shifts.swift; sourceTree = "<group>"; };
-		64D94185E11B574301B42B750B3A982B /* PrimeFactors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PrimeFactors.framework; path = "PrimeFactors-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64D94185E11B574301B42B750B3A982B /* PrimeFactors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrimeFactors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68BA49C7F89192B64C715AEDBB0057E2 /* MillerRabin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MillerRabin.swift; path = PrimeFactors/Classes/MillerRabin.swift; sourceTree = "<group>"; };
 		690DAD0A2667E120E54B0FA5D3D69FCF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6968FDEFFABC5215F59E2403C4D4832D /* PrimeFactors-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PrimeFactors-watchOS-prefix.pch"; path = "../PrimeFactors-watchOS/PrimeFactors-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		69AD7AC269A088942E4E596E47A23499 /* UInt128Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UInt128Extension.swift; path = PrimeFactors/Classes/UInt128Extension.swift; sourceTree = "<group>"; };
 		6AFAF8E0EAC999FAEFF73FCDBADBDB68 /* BigInt-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "BigInt-watchOS-dummy.m"; path = "../BigInt-watchOS/BigInt-watchOS-dummy.m"; sourceTree = "<group>"; };
-		745F5107C01A17476ADD5ADDAAA713FB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		745F5107C01A17476ADD5ADDAAA713FB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		75FFE3F85D73CC231E918C1D42D85EF6 /* UInt128.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UInt128.swift; path = PrimeFactors/Classes/UInt128.swift; sourceTree = "<group>"; };
 		768722D9A5B1C155B0D59892BAAE1EAC /* PUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PUtil.swift; path = PrimeFactors/Classes/PUtil.swift; sourceTree = "<group>"; };
 		7790022D42DC5C7C096D661268395806 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A497806C60939A6DDB882AEF30FBE2A /* PrimeFactors-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PrimeFactors-watchOS-dummy.m"; path = "../PrimeFactors-watchOS/PrimeFactors-watchOS-dummy.m"; sourceTree = "<group>"; };
 		7B0FB8460CE66F05DFE87FF34C20C2BB /* RandomUInt64.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomUInt64.swift; path = SipHash/RandomUInt64.swift; sourceTree = "<group>"; };
 		82C260E008127DC2F08AB55CACBDD567 /* SipHash-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SipHash-iOS-prefix.pch"; sourceTree = "<group>"; };
+		8441EC7F2221A5A20046B0D0 /* FactorCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FactorCache.swift; path = PrimeFactors/Classes/FactorCache.swift; sourceTree = "<group>"; };
 		848493EAF59A08FE2BF896A9D0C293CF /* Exponentiation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Exponentiation.swift; path = sources/Exponentiation.swift; sourceTree = "<group>"; };
 		84E0C11A4E1BE0053AFED2AE0228D435 /* Pods-PrimeFactors_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrimeFactors_Example.release.xcconfig"; sourceTree = "<group>"; };
 		86AD39F89A0BDD94135F0F96D5994934 /* Pods-PrimeFactors_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrimeFactors_Example-resources.sh"; sourceTree = "<group>"; };
-		871E0B63C737964911594E37FDFBD7E0 /* SipHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SipHash.framework; path = "SipHash-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		871E0B63C737964911594E37FDFBD7E0 /* SipHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SipHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C942DC36BD8018C5B4E278DC673652E /* BigInt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BigInt.swift; path = sources/BigInt.swift; sourceTree = "<group>"; };
 		8E3830DFDA618E14AD27282B9AA1E5A5 /* PrimeFactors-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "PrimeFactors-watchOS.modulemap"; path = "../PrimeFactors-watchOS/PrimeFactors-watchOS.modulemap"; sourceTree = "<group>"; };
 		908364BCE7A5A05D245656CEAB8AA22E /* SipHasher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SipHasher.swift; path = SipHash/SipHasher.swift; sourceTree = "<group>"; };
 		9178FA40362AD6A96B87D5F7CADE520A /* PrimeFactors-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "PrimeFactors-watchOS.xcconfig"; path = "../PrimeFactors-watchOS/PrimeFactors-watchOS.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9540BDC009A1CE11484430E5B9A84EBE /* SipHash-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "SipHash-iOS.modulemap"; sourceTree = "<group>"; };
 		980DDDEFC01115A9551537DC269F4C88 /* BitArray.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BitArray.swift; path = PrimeFactors/Classes/BitArray.swift; sourceTree = "<group>"; };
 		98193F097F3C9CC561B7D3F88EFDF1EB /* Factorize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Factorize.swift; path = PrimeFactors/Classes/Factorize.swift; sourceTree = "<group>"; };
 		98A1EF2D03CCF71647637805A50C3EA9 /* Data Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data Conversion.swift"; path = "sources/Data Conversion.swift"; sourceTree = "<group>"; };
-		9EFA8FB24ADDE1EF894E37F5B16E10A8 /* BigInt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BigInt.framework; path = "BigInt-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EFA8FB24ADDE1EF894E37F5B16E10A8 /* BigInt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BigInt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60256662322A1AC85D1F646F7307D66 /* SipHash-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SipHash-iOS.xcconfig"; sourceTree = "<group>"; };
 		A9ED54F841EEDED2EB2F8BFFC07AF2C6 /* SipHash-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SipHash-watchOS-prefix.pch"; path = "../SipHash-watchOS/SipHash-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		AA6D8185C4D01CE6D8656F1FE638F608 /* Addition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Addition.swift; path = sources/Addition.swift; sourceTree = "<group>"; };
@@ -326,7 +329,7 @@
 		CB7C12A9D48E393DEB4883B6AEFB86F1 /* Strideable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Strideable.swift; path = sources/Strideable.swift; sourceTree = "<group>"; };
 		CC20552AB3ADCD05B8E992ECDE929D39 /* WheelSieve.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WheelSieve.swift; path = PrimeFactors/Classes/WheelSieve.swift; sourceTree = "<group>"; };
 		CD92A67B6555B7A236A7BDD773C75418 /* PrimeFactors-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PrimeFactors-watchOS-umbrella.h"; path = "../PrimeFactors-watchOS/PrimeFactors-watchOS-umbrella.h"; sourceTree = "<group>"; };
-		CDCA65FAD61A4FF91F59AE676DF5C1E0 /* Pods_PrimeFactors_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PrimeFactors_Example.framework; path = "Pods-PrimeFactors_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDCA65FAD61A4FF91F59AE676DF5C1E0 /* Pods_PrimeFactors_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeFactors_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE59E5FCBACFC1FCB5837D74A6D9F8BD /* PrimeCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrimeCache.swift; path = PrimeFactors/Classes/PrimeCache.swift; sourceTree = "<group>"; };
 		D1DCB536FFC20ED7AAD847DFBC4B5F87 /* PrimeFactors-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "PrimeFactors-iOS.modulemap"; sourceTree = "<group>"; };
 		D4CF692C34A5246BC733D55CAA34776D /* SipHash-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SipHash-watchOS-umbrella.h"; path = "../SipHash-watchOS/SipHash-watchOS-umbrella.h"; sourceTree = "<group>"; };
@@ -341,8 +344,8 @@
 		F0577F636B4AD2E3A064F502266A4FC6 /* PrimeFactors-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PrimeFactors-iOS-umbrella.h"; sourceTree = "<group>"; };
 		F34F82E23FB418F60C06431AABDF16E2 /* Bitwise Ops.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bitwise Ops.swift"; path = "sources/Bitwise Ops.swift"; sourceTree = "<group>"; };
 		F4CD7042780DED4C8E06D5382BE69493 /* SipHash-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SipHash-iOS-umbrella.h"; sourceTree = "<group>"; };
-		F65C7936257E3A141624D08EA849D8C3 /* SipHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SipHash.framework; path = "SipHash-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6757A8CF5D18214BBF69E7D2145BABA /* Pods_PrimeFactorsWatchExample_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PrimeFactorsWatchExample_Extension.framework; path = "Pods-PrimeFactorsWatchExample Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F65C7936257E3A141624D08EA849D8C3 /* SipHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SipHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6757A8CF5D18214BBF69E7D2145BABA /* Pods_PrimeFactorsWatchExample_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeFactorsWatchExample_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6EB63DC5E5CF4020A32D524F88C53A5 /* SipHash-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SipHash-watchOS.xcconfig"; path = "../SipHash-watchOS/SipHash-watchOS.xcconfig"; sourceTree = "<group>"; };
 		F9D5D71BC30041B6FF2496FDAF9C8913 /* Pods-PrimeFactorsWatchExample Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrimeFactorsWatchExample Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		FFBE94D158BF0EC03DD7228769713B9C /* Pods-PrimeFactors_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PrimeFactors_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -506,7 +509,6 @@
 				0DE207C92D166B8E636A7597709D2393 /* Words and Bits.swift */,
 				229C7B03D566492E54445DBDDF99EA71 /* Support Files */,
 			);
-			name = BigInt;
 			path = BigInt;
 			sourceTree = "<group>";
 		};
@@ -606,6 +608,7 @@
 				68BA49C7F89192B64C715AEDBB0057E2 /* MillerRabin.swift */,
 				ACAD8CC7BC6A57DE1AF975AAEE7716BE /* Pollard.swift */,
 				CE59E5FCBACFC1FCB5837D74A6D9F8BD /* PrimeCache.swift */,
+				8441EC7F2221A5A20046B0D0 /* FactorCache.swift */,
 				561233F8C44CE9D460B34857A9886DE4 /* PrimeProtocol.swift */,
 				768722D9A5B1C155B0D59892BAAE1EAC /* PUtil.swift */,
 				2408C828A7FB073E04E0F33C0CCBC4A3 /* PWheel.swift */,
@@ -677,7 +680,6 @@
 				908364BCE7A5A05D245656CEAB8AA22E /* SipHasher.swift */,
 				002977BE5F40375412705709452CA3F8 /* Support Files */,
 			);
-			name = SipHash;
 			path = SipHash;
 			sourceTree = "<group>";
 		};
@@ -1079,6 +1081,7 @@
 				E8B935B501A1D6F0745BFD945038EABF /* BitArray.swift in Sources */,
 				31FABDBEBB66C9323FAB157E5273D5C7 /* Factorize.swift in Sources */,
 				4453DA71B5CB7D3A1EB2350F6C577A6B /* FactorStrategy.swift in Sources */,
+				8441EC802221A5A20046B0D0 /* FactorCache.swift in Sources */,
 				D5F10D5BA0A6E8F9D155B438F3B2F8CD /* Lehman.swift in Sources */,
 				4E4F8096A7BBD363C233224E3F15B1E1 /* MillerRabin.swift in Sources */,
 				ABEE4C4A86EF540421001D0661787D53 /* Pollard.swift in Sources */,
@@ -1103,6 +1106,7 @@
 				76474490C286670DD27AA60E7385577A /* BitArray.swift in Sources */,
 				C9F4C6CD18EF1C0CF6270BD46F1C26E6 /* Factorize.swift in Sources */,
 				EC55DE9B112B5FB0BE33E412099C92A7 /* FactorStrategy.swift in Sources */,
+				8441EC812221A5A20046B0D0 /* FactorCache.swift in Sources */,
 				5696615D092D6C5113CDC77FE728BD1D /* Lehman.swift in Sources */,
 				E1999D4CAD31A118D906B03026950BEC /* MillerRabin.swift in Sources */,
 				0115B0E94AFDB2A4CD111CD32D77F2BA /* Pollard.swift in Sources */,
@@ -1910,8 +1914,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 				WATCHOS_DEPLOYMENT_TARGET = 5.1;
