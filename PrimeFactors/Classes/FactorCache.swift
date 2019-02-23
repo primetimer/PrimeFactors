@@ -68,7 +68,7 @@ public class FactorCache {
         return ret
     }
     
-    func Divisors(p: BigUInt,cancel: CalcCancelProt?) -> [BigUInt]
+    public func Divisors(p: BigUInt,cancel: CalcCancelProt?) -> [BigUInt]
     {
         let factors = Factor(p: p,cancel: cancel)
         if cancel?.IsCancelled() ?? false { return [1,p] }
@@ -124,7 +124,7 @@ public class FactorsWithPot {
         let pf = FactorCache.shared.Factor(p: n, cancel: cancel)
         self.init(pf: pf)
     }
-    init(pf : PrimeFactors) {
+    public init(pf : PrimeFactors) {
         self.unfactored = pf.unfactored
         factors = []
         
@@ -147,18 +147,18 @@ public class FactorsWithPot {
     }
 }
 
-struct FactorWithPot {
-    init(f: BigUInt) {
+public struct FactorWithPot {
+    public init(f: BigUInt) {
         self.f = f
         self.e = 1
     }
-    init(f: BigUInt, e: Int) {
+    public init(f: BigUInt, e: Int) {
         self.f = f
         self.e = e
     }
     
-    var f: BigUInt = 0
-    var e: Int = 0
+    public var f: BigUInt = 0
+    public var e: Int = 0
 }
 
 
