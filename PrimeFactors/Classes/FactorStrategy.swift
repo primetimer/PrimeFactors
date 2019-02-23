@@ -65,7 +65,7 @@ public class PrimeFactorStrategy {
 	
     private func QuickTrial(ninput: BigUInt) -> PrimeFactors {
         if verbose { print ("QuickTrial") }
-        var factors = PrimeFactors(n: ninput)
+        let factors = PrimeFactors(n: ninput)
         for p in first {
             let bigp = BigUInt(p)
             if bigp * bigp > factors.unfactored { break }
@@ -96,7 +96,7 @@ public class PrimeFactorStrategy {
 	public func Factorize(ninput: BigUInt, cancel: CalcCancelProt?) -> PrimeFactors {
 		
 		//1. Probedivision fuer sehr kleine Faktoren
-		var factors = QuickTrial(ninput: ninput)
+        let factors = QuickTrial(ninput: ninput)
 		if factors.unfactored == 1 { return factors }
 		if IsCancelled(cancel: cancel) { return factors }
 		

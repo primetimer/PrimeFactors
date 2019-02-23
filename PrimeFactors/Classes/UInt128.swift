@@ -430,8 +430,9 @@ extension UInt128 : FixedWidthInteger {
 // MARK: - BinaryInteger Conformance
 extension UInt128 : BinaryInteger {
 	// MARK: Instance Properties
+	public static var bitWidth: Int { return 128 }
 	
-	public static var bitWidth : Int { return 128 }
+    //public static var bitWidth : Int { return 128 }
 	
 	
 	// MARK: Instance Methods
