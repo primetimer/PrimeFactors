@@ -68,13 +68,17 @@ public class PrimeFactorStrategy {
         let factors = PrimeFactors(n: ninput)
         for p in first {
             let bigp = BigUInt(p)
-            if bigp * bigp > factors.unfactored { break }
+            
             while factors.unfactored % bigp == 0 {
                 //                nn = nn / bigp
                 factors.Append(f: bigp)
-                factors.unfactored = factors.unfactored / bigp
+                //factors.unfactored = factors.unfactored / bigp
                 if verbose { print("Factor:",bigp) }
             }
+            if bigp * bigp > factors.unfactored { break }
+        }
+        if factors.unfactored.isPrime() {
+            factors.Append(f: factors.unfactored)
         }
         return factors
     }
@@ -101,7 +105,7 @@ public class PrimeFactorStrategy {
 		if IsCancelled(cancel: cancel) { return factors }
 		
 		//2. Pollards-Rho Methode fuer kleine Zahlen zur Abspaltung von Faktoren bis zur vierten Wurzel
-		let rhoupto = ninput.squareRoot().squareRoot()
+		let rhoupto = factors.unfactored.squareRoot().squareRoot()
 		while factors.unfactored > rhoupto { //Heuristik
 			if IsCancelled(cancel: cancel) { return factors }
 			if verbose { print ("Rho") }

@@ -1,5 +1,6 @@
 import UIKit
 import XCTest
+import BigInt
 import PrimeFactors
 
 class Tests: XCTestCase {
@@ -16,6 +17,8 @@ class Tests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
+        let n = BigUInt(1344)
+        let d = FactorCache.shared.Divisors(p: n, cancel: nil)
         XCTAssert(true, "Pass")
     }
     

@@ -74,7 +74,10 @@ public class FactorCache {
         if cancel?.IsCancelled() ?? false { return [1,p] }
         let c = factors.factors.count
         if c == 0 { return [BigUInt(1)] }
-        
+        factors.factors.sort()
+//        for i in 0..<c {
+//            print(i,":",factors.factors[i])
+//        }
         let d1 = factors.factors[0]
         var d1potenz : BigUInt = 1
         var multiplicity = 0
