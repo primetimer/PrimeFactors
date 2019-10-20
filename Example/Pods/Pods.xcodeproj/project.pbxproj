@@ -71,6 +71,14 @@
 		806899E11A65F2F567C5C66B3AEAD3C8 /* SipHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4013B4738295E6303FD4F2BFE5A17496 /* SipHash.framework */; };
 		807AB587838E58F59C369B393C7BC362 /* Sieve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9413D5B9921B7E01AE6B25211C1FE4 /* Sieve.swift */; };
 		82993D25B92AAD2E774AAC3837C1DEE1 /* Bitwise Ops.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34F82E23FB418F60C06431AABDF16E2 /* Bitwise Ops.swift */; };
+		84035A03235C1C53001EE1BF /* PiML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840359FF235C1C52001EE1BF /* PiML.swift */; };
+		84035A04235C1C53001EE1BF /* PiML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840359FF235C1C52001EE1BF /* PiML.swift */; };
+		84035A05235C1C53001EE1BF /* PiTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84035A00235C1C53001EE1BF /* PiTable.swift */; };
+		84035A06235C1C53001EE1BF /* PiTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84035A00235C1C53001EE1BF /* PiTable.swift */; };
+		84035A09235C1CF6001EE1BF /* PhiCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84035A07235C1CF6001EE1BF /* PhiCalculator.swift */; };
+		84035A0A235C1CF6001EE1BF /* PhiCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84035A07235C1CF6001EE1BF /* PhiCalculator.swift */; };
+		84035A0B235C1CF6001EE1BF /* PhiTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84035A08235C1CF6001EE1BF /* PhiTable.swift */; };
+		84035A0C235C1CF6001EE1BF /* PhiTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84035A08235C1CF6001EE1BF /* PhiTable.swift */; };
 		8441EC802221A5A20046B0D0 /* FactorCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441EC7F2221A5A20046B0D0 /* FactorCache.swift */; };
 		8441EC812221A5A20046B0D0 /* FactorCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441EC7F2221A5A20046B0D0 /* FactorCache.swift */; };
 		84DF1E824616A4F933231A16E459823F /* Primitive Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBCCE207305C91E054F11A8BD3EA3DF /* Primitive Types.swift */; };
@@ -289,6 +297,10 @@
 		7A497806C60939A6DDB882AEF30FBE2A /* PrimeFactors-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PrimeFactors-watchOS-dummy.m"; path = "../PrimeFactors-watchOS/PrimeFactors-watchOS-dummy.m"; sourceTree = "<group>"; };
 		7B0FB8460CE66F05DFE87FF34C20C2BB /* RandomUInt64.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomUInt64.swift; path = SipHash/RandomUInt64.swift; sourceTree = "<group>"; };
 		82C260E008127DC2F08AB55CACBDD567 /* SipHash-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SipHash-iOS-prefix.pch"; sourceTree = "<group>"; };
+		840359FF235C1C52001EE1BF /* PiML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PiML.swift; path = PrimeFactors/Classes/PiML.swift; sourceTree = "<group>"; };
+		84035A00235C1C53001EE1BF /* PiTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PiTable.swift; path = PrimeFactors/Classes/PiTable.swift; sourceTree = "<group>"; };
+		84035A07235C1CF6001EE1BF /* PhiCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhiCalculator.swift; path = PrimeFactors/Classes/PhiCalculator.swift; sourceTree = "<group>"; };
+		84035A08235C1CF6001EE1BF /* PhiTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhiTable.swift; path = PrimeFactors/Classes/PhiTable.swift; sourceTree = "<group>"; };
 		8441EC7F2221A5A20046B0D0 /* FactorCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FactorCache.swift; path = PrimeFactors/Classes/FactorCache.swift; sourceTree = "<group>"; };
 		848493EAF59A08FE2BF896A9D0C293CF /* Exponentiation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Exponentiation.swift; path = sources/Exponentiation.swift; sourceTree = "<group>"; };
 		84E0C11A4E1BE0053AFED2AE0228D435 /* Pods-PrimeFactors_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrimeFactors_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -601,6 +613,10 @@
 		9CDE1973D5274EAE730AA932EE5FB2B3 /* PrimeFactors */ = {
 			isa = PBXGroup;
 			children = (
+				840359FF235C1C52001EE1BF /* PiML.swift */,
+				84035A00235C1C53001EE1BF /* PiTable.swift */,
+				84035A07235C1CF6001EE1BF /* PhiCalculator.swift */,
+				84035A08235C1CF6001EE1BF /* PhiTable.swift */,
 				980DDDEFC01115A9551537DC269F4C88 /* BitArray.swift */,
 				98193F097F3C9CC561B7D3F88EFDF1EB /* Factorize.swift */,
 				AFDE71BF73602953B47D486AA32C5004 /* FactorStrategy.swift */,
@@ -975,6 +991,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -1078,8 +1095,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84035A09235C1CF6001EE1BF /* PhiCalculator.swift in Sources */,
+				84035A05235C1C53001EE1BF /* PiTable.swift in Sources */,
 				E8B935B501A1D6F0745BFD945038EABF /* BitArray.swift in Sources */,
 				31FABDBEBB66C9323FAB157E5273D5C7 /* Factorize.swift in Sources */,
+				84035A0B235C1CF6001EE1BF /* PhiTable.swift in Sources */,
 				4453DA71B5CB7D3A1EB2350F6C577A6B /* FactorStrategy.swift in Sources */,
 				8441EC802221A5A20046B0D0 /* FactorCache.swift in Sources */,
 				D5F10D5BA0A6E8F9D155B438F3B2F8CD /* Lehman.swift in Sources */,
@@ -1092,6 +1112,7 @@
 				CBBA5BA38888F36923C78D10E1CA69FB /* PWheel.swift in Sources */,
 				53CDD86CDB43F31485FDA33679ACB9F7 /* Shanks.swift in Sources */,
 				807AB587838E58F59C369B393C7BC362 /* Sieve.swift in Sources */,
+				84035A03235C1C53001EE1BF /* PiML.swift in Sources */,
 				8F031A2CD6223F17231B19F452077CC0 /* TrialDivision.swift in Sources */,
 				511600D4BCF7ADDB3085FD665965F6BA /* UInt128.swift in Sources */,
 				D4AAAB91FBE27609365DDDCE0E57E611 /* UInt128Extension.swift in Sources */,
@@ -1103,8 +1124,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84035A0A235C1CF6001EE1BF /* PhiCalculator.swift in Sources */,
+				84035A06235C1C53001EE1BF /* PiTable.swift in Sources */,
 				76474490C286670DD27AA60E7385577A /* BitArray.swift in Sources */,
 				C9F4C6CD18EF1C0CF6270BD46F1C26E6 /* Factorize.swift in Sources */,
+				84035A0C235C1CF6001EE1BF /* PhiTable.swift in Sources */,
 				EC55DE9B112B5FB0BE33E412099C92A7 /* FactorStrategy.swift in Sources */,
 				8441EC812221A5A20046B0D0 /* FactorCache.swift in Sources */,
 				5696615D092D6C5113CDC77FE728BD1D /* Lehman.swift in Sources */,
@@ -1117,6 +1141,7 @@
 				9F378299A9C4BCEA7A20F2C1090875F5 /* PWheel.swift in Sources */,
 				60D0841A8CD31B9CD3DD152FF8CF75CA /* Shanks.swift in Sources */,
 				CFCBD2DE2FA8B24D40FA754CDAF3F484 /* Sieve.swift in Sources */,
+				84035A04235C1C53001EE1BF /* PiML.swift in Sources */,
 				BE68B4B67F1F210536EE17287BD613AD /* TrialDivision.swift in Sources */,
 				98D9C00C5FE65901C9FACC596ABDC33D /* UInt128.swift in Sources */,
 				B5765C87B9A913CB7075DF92BC038424 /* UInt128Extension.swift in Sources */,

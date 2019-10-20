@@ -27,9 +27,26 @@ class RPNCalc : CalcCancellable {
 	override public init() {
 		super.init()
 		pcalc.canceldelegate = self
+        
+        #if false
+            TestPin()
+        #endif
+        
 	}
 	
-	func Copy() -> RPNCalc {
+        #if false
+        private func TestPin() {
+            let pcalc = PrimeCalculator()
+            let pitable = PiTable(pcalc: pcalc, tableupto: 10000)
+            let ml = PiMeisselLehmer(pcalc: pcalc, pitable: pitable)
+       
+            let n = BigUInt(10000*10000/10)
+            let pin = ml.Pin(n: UInt64(n))
+            print("Pin:",pin)
+        }
+        #endif
+
+        func Copy() -> RPNCalc {
 		let copy = RPNCalc()
 		copy.stackstate = self.stackstate
 		for val in stack {

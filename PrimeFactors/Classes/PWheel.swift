@@ -109,7 +109,7 @@ class WheelArray {
 		}
 	}
 	
-	func bitCount(start : UInt64, end : UInt64) -> UInt64 {
+	public func bitCount(start : UInt64, end : UInt64) -> UInt64 {
 		
 		var bitcount : UInt64 = 0
 		
