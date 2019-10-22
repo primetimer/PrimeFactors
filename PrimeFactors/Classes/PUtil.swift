@@ -8,7 +8,7 @@
 import Foundation
 import BigInt
 
-extension BigUInt {
+public extension BigUInt {
 	func issquare() -> Bool {
 		let r2 = self.squareRoot()
 		if r2 * r2 == self { return true }
@@ -16,7 +16,7 @@ extension BigUInt {
 	}
 	
 	// Cubic Root
-	public func iroot3()->BigUInt {
+    func iroot3()->BigUInt {
 		if self == 0 { return 0 }
 		if self < 8 { return 1 }
 		
@@ -41,7 +41,7 @@ extension BigUInt {
 
 
 //Quadratwurzel und kubische Wurzel mittels Floating Point Arithmetik
-extension UInt64 {
+public extension UInt64 {
 	func squareRoot()->UInt64 {
 		var r2 = UInt64(sqrt(Double(self)+0.5))
 		while (r2+1) * (r2+1) <= self {
@@ -76,7 +76,7 @@ extension UInt64 {
 	}
 	
 	
-	public func greatestCommonDivisor(with b: UInt64) -> UInt64 {
+    func greatestCommonDivisor(with b: UInt64) -> UInt64 {
 		var x = self
 		var y = b
 		while y > 0 {
